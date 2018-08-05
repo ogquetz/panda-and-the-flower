@@ -1,4 +1,18 @@
-<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
 <!-- *************************************************************************** -->
 <!-- *************************************************************************** -->
 <!-- ** Author: Peter Garza                                                   ** -->
@@ -12,15 +26,23 @@
 <svg height="450" version="1.1" viewBox="-800 -450 1600 900" width="800" x="0" y="0"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="scene1" display="none">
-    <set attributeName="display" to="inherit" begin="0s;scene2display.end" dur="2s" fill="remove" id="scene1display"/>
-    <use xlink:href="../pieces/panda.svg#head-right-static" />
-    <circle cx="0" cy="0" r="100" fill="red"/>
-  </g>
-  <g id="scene2" display="none">
-    <set attributeName="display" to="inherit" begin="scene1display.end" end="scene2rectMove.end" fill="remove" id="scene2display"/>
-    <rect x="0%" y="0%" width="50%" height="50%" fill="blue">
-      <animate attributeName="y" from="50%" to="0%" begin="scene2display.begin" dur="1s" id="scene2rectMove"/>
-    </rect>
-  </g>
+  <defs>
+    <ellipse id="arm" cx="0" cy="-175" rx="30" ry="60" fill="black" />
+  </defs>
+  <!-- <circle cx="0" cy="0" r="100" fill="green">
+    <animate id="s2c2Frame2Display" attributeName="cx" from="0" to="200" begin="0s" dur="1s"/>
+  </circle> -->
+  <use id="frame2-panda-arm" xlink:href="#arm" transform="translate(150,500)">
+    <animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
+        values="0 0 -245;-90 0 -245;0 0 -245"
+        keyTimes="0;1"
+        keySplines="0 .5 .5 1"
+        begin="0s" dur="1s" fill="freeze" />
+    <!-- <animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
+        values="0 150 255;-90 150 255"
+        keyTimes="&EaseOutTimes;"
+        keySplines="&EaseOutSplines;"
+        begin="0s" dur="0.5s" fill="freeze" /> -->
+
+  </use>
 </svg>
