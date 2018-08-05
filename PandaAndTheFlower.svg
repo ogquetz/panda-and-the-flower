@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
          "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
 <!ENTITY EaseInOutTimes "0;1">
 <!ENTITY EaseInOutSplines ".5 0 .5 1">
@@ -47,14 +47,14 @@
 			pandaCreditsDictionary.setLabel(dcNS,dcTitle,dcTitleLabel);
 			pandaCreditsDictionary.setLabel(ccNS,ccAgent,ccAgentLabel);
 			pandaCreditsDictionary.setLabel(dcNS,dcDate,dcDateLabel);
-			
+
 			//Prep Credits
 			pandaCredits.appendElementsByTagNameNS(dcNS,dcCreator,pandaCreditsDictionary);
 			//pandaCredits.appendElementsByTagNameNS(dcNS,dcContributor,pandaCreditsDictionary);
 			pandaCredits.appendElementsByTagNameNS(dcNS,dcDate,pandaCreditsDictionary);
 			pandaCredits.assembleCredits();
 
-			
+
 		};
 	 ]]></script>
 	<style type="text/css"><![CDATA[
@@ -63,19 +63,19 @@
 			font-size: 12pt;
 			text-anchor: end;
 		}
-		
+
 		.nameStyle {
 			font-family: "Times New Roman, Serif";
 			font-size: 16pt;
 			text-anchor: start;
 		}
-		
+
 		.caption {
 		  font-family: "Times New Roman, Serif";
 			font-size: 16pt;
 			fill: black;
 		}
-		
+
 	]]></style>
 	<metadata>
 		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -105,7 +105,7 @@
 				<dc:rights rdf:nodeID="GarzaPeter"/>
 				<cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"/>
 			</cc:Work>
-			
+
 			<cc:License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
 				<cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
 				<cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
@@ -1124,7 +1124,7 @@
 			<use xlink:href="#leaf" transform="translate(125 15) rotate(-65)" />
 			<use xlink:href="#leaf" transform="translate(125 15) rotate(-40)" />
 		</g>
-    
+
 
     <!-- Bamboo stalks -->
     <!-- Stack several joints from bottom to top.  Add some branches -->
@@ -1236,7 +1236,7 @@
 			<use xlink:href="#buttonbackground"/>
 			<use xlink:href="#bloom-front" />
 		</g>
-		
+
 		<g id="creditlines">
 		  <text fill="black" font-family="Arial, Sans Serif" font-size="14pt" text-anchor="middle" x="0" y="70">credits</text>
 			<line fill="none" stroke="black" stroke-width="2pt" x1="-25" x2="25" y1="-25" y2="-25"/>
@@ -1256,9 +1256,9 @@
 <!-- ============= -->
 
 	<g id="title" display="none">
-		<set id="title-display" attributeName="display" to="inline" begin="0s; menuflowerbutton.click+3s" dur="6s" />
-		<animate attributeName="opacity" from="1" to="0" dur="1s" begin="title-display.begin+4s" fill="freeze" />
-		<text fill="black" filter="url(#textbackground)" font-family="Times New Roman" id="title-screen-caption" text-anchor="middle">
+		<set id="titleDisplay" attributeName="display" to="inline" begin="0s; menuflowerbutton.click+3s" dur="6s" fill="remove"/>
+		<animate attributeName="opacity" from="1" to="0" dur="1s" begin="titleDisplay.begin+4s" fill="freeze" id="titleNameFade"/>
+		<text fill="black" filter="url(#textbackground)" font-family="Times New Roman" id="titleScreenCaption" text-anchor="middle">
     <tspan x="400" y="167" font-size="36pt">Panda</tspan>
 			<tspan x="400" y="200" font-size="16pt">and the</tspan>
 			<tspan x="400" y="250" font-size="36pt">Flower</tspan>
@@ -1266,14 +1266,14 @@
 	</g>
 	<g id="scene1">
 		<desc>Scene 1: Panda finds one flower in the forest.</desc>
-		<g id="scene1-cut1" display="none">
+		<g id="s1c1" display="none">
 			<desc>Side shot of Panda walking in the woods</desc>
-			<set id="scene1-cut1-display" attributeName="display" to="inline" begin="title-display.end" dur="15s" />
-			<svg id="scene1-cut1-illustration">
+			<set id="s1c1Display" attributeName="display" to="inline" begin="titleDisplay.end" dur="15s" />
+			<svg id="s1c1Illustration">
 				<animate attributeName="viewBox" additive="replace" calcMode="spline"
 						values="-2000 0 800 450;0 0 800 450" dur="15s"
-						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" begin="scene1-cut1-display.begin" />
-				<g id="scene1-cut1-background">
+						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" begin="s1c1Display.begin" />
+				<g id="s1c1Background">
 					<use xlink:href="#bamboostalk1" transform="translate(-570,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-500,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-550,365) scale(0.7) rotate(-4)" />
@@ -1283,45 +1283,45 @@
 				</g>
 				<use xlink:href="#flower" x="600" y="400" />
 				<use xlink:href="#panda-right-walking" x="120" y="420">
-					<animate id="scene1-cut1-pandawalking" attributeName="x" additive="replace"
-							values="-1614;130" dur="15s" begin="scene1-cut1-display.begin" fill="freeze"/>
+					<animate id="s1c1Pandawalking" attributeName="x" additive="replace"
+							values="-1614;130" dur="15s" begin="s1c1Display.begin" fill="freeze"/>
 				</use>
-				<g id="scene1-cut1-foreground">
+				<g id="s1c1Foreground">
 					<use xlink:href="#bamboostalk1" transform="translate(-830,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-870,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-800,565) rotate(3)" />
 				</g>
 			</svg>
-			<text id="scene1-cut1-caption" class="caption" filter="url(#textbackground)">
+			<text id="s1c1Caption" class="caption" filter="url(#textbackground)">
       <tspan x="270" y="200">One warm spring day, Panda took a walk in the forest.</tspan>
 				<tspan x="270" y="230">While she was walking, she saw a red flower.</tspan>
 			</text>
 		</g>
 
-		<g id="scene1-cut2" display="none">
+		<g id="s1c2" display="none">
 			<desc>Panda stops and looks happy and thinks.</desc>
-			<set id="scene1-cut2-display" attributeName="display" to="inline" begin="scene1-cut1-display.end" dur="10s" />
-			<g id="scene1-cut2-illustration">
+			<set id="s1c2Display" attributeName="display" to="inline" begin="s1c1Display.end" dur="10s" />
+			<g id="s1c2Illustration">
 				<use xlink:href="#bamboostalk2" transform="translate(200,500) rotate(3)" />
 				<use xlink:href="#panda-front" transform="translate(100,600) scale(1)">
-					<animate id="scene1-cut2-pandawalks" attributeName="y" calcMode="spline" additive="sum"
+					<animate id="s1c2Pandawalks" attributeName="y" calcMode="spline" additive="sum"
 							values="0;-10.25;0" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
-							begin="scene1-cut2-display.begin" dur="1s" repeatDur="4s" fill="freeze" />
+							begin="s1c2Display.begin" dur="1s" repeatDur="4s" fill="freeze" />
 					<animateTransform attributeName="transform" type="scale" calcMode="spline" additive="sum"
 							values="1;1.5" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-							begin="scene1-cut2-display.begin" dur="4s" fill="freeze" />
+							begin="s1c2Display.begin" dur="4s" fill="freeze" />
 				</use>
 				<use xlink:href="#bloom-rear" transform="translate(500,425) scale(3)" />
 				<g id="thoughtbubbles">
 					<circle cx="280" cy="125" r="30" fill="white" stroke="black" opacity="0" display="none">
-						<animate id="scene1-cut2-showbubble1" attributeName="opacity" from="0" to="1" dur="0.5s"
-								begin="scene1-cut2-pandawalks.begin+3s" fill="freeze" />
-						<set attributeName="display" begin="scene1-cut2-showbubble1.begin" end="scene1-cut2-display.end" to="inline"/>
+						<animate id="s1c2Showbubble1" attributeName="opacity" from="0" to="1" dur="0.5s"
+								begin="s1c2Pandawalks.begin+3s" fill="freeze" />
+						<set attributeName="display" begin="s1c2Showbubble1.begin" end="s1c2Display.end" to="inline"/>
 					</circle>
 					<circle cx="405" cy="90" r="50" fill="white" stroke="black" opacity="0" display="none">
-						<animate id="scene1-cut2-showbubble2" attributeName="opacity" from="0" to="1" dur="0.5s"
-								begin="scene1-cut2-showbubble1.begin+0.4s" fill="freeze" />
-						<set attributeName="display" begin="scene1-cut2-showbubble2.begin" end="scene1-cut2-display.end" to="inline"/>
+						<animate id="s1c2Showbubble2" attributeName="opacity" from="0" to="1" dur="0.5s"
+								begin="s1c2Showbubble1.begin+0.4s" fill="freeze" />
+						<set attributeName="display" begin="s1c2Showbubble2.begin" end="s1c2Display.end" to="inline"/>
 					</circle>
 					<g opacity="0" display="none">
 						<circle cx="615" cy="165" r="110" fill="white" stroke="black" />
@@ -1329,104 +1329,104 @@
 							<use xlink:href="#head-front-static" x="150" y="450" />
 							<use xlink:href="#bloom-front" x="110" y="60" />
 						</svg>
-						<animate id="scene1-cut2-showbubble3" attributeName="opacity" from="0" to="1" dur="0.5s"
-								begin="scene1-cut2-showbubble2.begin+0.4s" fill="freeze" />
-						<set attributeName="display" begin="scene1-cut2-showbubble3.begin" end="scene1-cut2-display.end" to="inline"/>
+						<animate id="s1c2Showbubble3" attributeName="opacity" from="0" to="1" dur="0.5s"
+								begin="s1c2Showbubble2.begin+0.4s" fill="freeze" />
+						<set attributeName="display" begin="s1c2Showbubble3.begin" end="s1c2Display.end" to="inline"/>
 					</g>
 				</g>
 			</g>
-			<text id="scene1-cut2-caption" class="caption" filter="url(#textbackground)">
+			<text id="s1c2Caption" class="caption" filter="url(#textbackground)">
       <tspan x="270" y="300">&ldquo;Oh my!&rdquo; she said. &ldquo;That is a beautiful red flower.&rdquo;</tspan>
 				<tspan x="270" y="330">&ldquo;It would look very pretty in my hair.&rdquo;</tspan>
 			</text>
 		</g>
 
-		<g id="scene1-cut3" display="none">
-			<set id="scene1-cut3-display" attributeName="display" to="inline" begin="scene1-cut2-display.end" dur="5s" />
-			<g id="scene1-cut3-illustration">
-				<use xlink:href="#bamboostalk2" id="scene1-cut3-background" transform="translate(200,500) rotate(3)">
-					<animateTransform id="scene1-cut3-moveBackground" attributeName="transform" type="translate" calcMode="spline"
+		<g id="s1c3" display="none">
+			<set id="s1c3Display" attributeName="display" to="inline" begin="s1c2Display.end" dur="5s" />
+			<g id="s1c3Illustration">
+				<use xlink:href="#bamboostalk2" id="s1c3Background" transform="translate(200,500) rotate(3)">
+					<animateTransform id="s1c3MoveBackground" attributeName="transform" type="translate" calcMode="spline"
 							values="0,0;300,0" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-							begin="scene1-cut3-display.begin" dur="1s" additive="sum" fill="freeze" />
+							begin="s1c3Display.begin" dur="1s" additive="sum" fill="freeze" />
 				</use>
-				<g id="scene1-cut3-panda-front" transform="translate(100,600) scale(1.5)">
+				<g id="s1c3PandaFront" transform="translate(100,600) scale(1.5)">
 					<use xlink:href="#leg" x="-40" />
 					<use xlink:href="#leg" x="40" />
 					<use xlink:href="#body" />
 					<use xlink:href="#head-front-static">
 						<animateTransform attributeName="transform" type="scale" additive="sum" calcMode="spline"
 								values="1;1.2" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
-								begin="scene1-cut3-movePanda.begin" dur="5s" />
+								begin="s1c3MovePanda.begin" dur="5s" />
 						<animateTransform attributeName="transform" type="translate" additive="sum" calcMode="spline"
 								values="0,0;0,70" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
-								begin="scene1-cut3-movePanda.begin" dur="5s" />
+								begin="s1c3MovePanda.begin" dur="5s" />
 					</use>
-					<use xlink:href="#arm-front" id="scene1-cut3-panda-front-arm-left" x="-90" transform="rotate(15 -90 -245)" />
-					<use xlink:href="#arm-front" id="scene1-cut3-panda-front-arm-right" x="90" transform="rotate(-15 90 -245)">
+					<use xlink:href="#arm-front" id="s1c3PandaFrontArmLeft" x="-90" transform="rotate(15 -90 -245)" />
+					<use xlink:href="#arm-front" id="s1c3PandaFrontArmRight" x="90" transform="rotate(-15 90 -245)">
 						<animateTransform attributeName="transform" type="rotate" additive="replace" calcMode="spline"
 								values="-15 90 -245;0 45 -235" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
-								begin="scene1-cut3-movePanda.begin" dur="5s" />
+								begin="s1c3MovePanda.begin" dur="5s" />
 						<animateTransform attributeName="transform" type="translate" additive="sum" calcMode="spline"
 								values="0,0;-350,150" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
-								begin="scene1-cut3-movePanda.begin" dur="5s" />
+								begin="s1c3MovePanda.begin" dur="5s" />
 						<animateTransform attributeName="transform" type="scale" additive="sum" calcMode="spline"
 								values="1;5,2" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
-								begin="scene1-cut3-movePanda.begin" dur="5s" />
+								begin="s1c3MovePanda.begin" dur="5s" />
 					</use>
-					<animateTransform id="scene1-cut3-movePanda" attributeName="transform" type="translate" calcMode="spline"
+					<animateTransform id="s1c3MovePanda" attributeName="transform" type="translate" calcMode="spline"
 							values="0,0;100,0" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-							begin="scene1-cut3-display.begin" dur="1s" additive="sum" fill="freeze" />
+							begin="s1c3Display.begin" dur="1s" additive="sum" fill="freeze" />
 				</g>
 				<use xlink:href="#bloom-rear" transform="translate(500,425) scale(3)">
-					<animateTransform id="scene1-cut3-moveFlower" attributeName="transform" type="translate" calcMode="spline"
+					<animateTransform id="s1c3MoveFlower" attributeName="transform" type="translate" calcMode="spline"
 							values="0,0;-100,0" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-							begin="scene1-cut3-display.begin" dur="1s" additive="sum" fill="freeze" />
+							begin="s1c3Display.begin" dur="1s" additive="sum" fill="freeze" />
 				</use>
 			</g>
-			<text id="scene1-cut3-caption" class="caption" filter="url(#textbackground)">
+			<text id="s1c3Caption" class="caption" filter="url(#textbackground)">
       <tspan x="400" y="100">She reached down to pick the flower.</tspan>
 			</text>
 		</g>
 
-		<g id="scene1-cut4" display="none">
-			<set id="scene1-cut4-display" attributeName="display" to="inline" begin="scene1-cut3-display.end" dur="7s" />
-			<svg id="scene1-cut4-illustration">
-				<g id="scene1-cut4-flower" transform="translate(500,400) scale(3)">
+		<g id="s1c4" display="none">
+			<set id="s1c4Display" attributeName="display" to="inline" begin="s1c3Display.end" dur="7s" />
+			<svg id="s1c4Illustration">
+				<g id="s1c4Flower" transform="translate(500,400) scale(3)">
 					<use xlink:href="#stem" transform="translate(0 20) scale(1 1.25)" />
 					<use xlink:href="#bloom-front" transform="translate(-20 -60)" />
 				</g>
 				<animate attributeName="viewBox" values="0 0 800 450;80 20 704 396" calcMode="spline"
 						dur="5s" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-						begin="scene1-cut4-display.begin" fill="freeze" />
+						begin="s1c4Display.begin" fill="freeze" />
 			</svg>
-			<text id="scene1-cut4-caption" class="caption" filter="url(#textbackground)">
+			<text id="s1c4Caption" class="caption" filter="url(#textbackground)">
       <tspan x="50" y="100">Just then, the flower said, &ldquo;If you wait, there will be more.&rdquo;</tspan>
 			</text>
 		</g>
 
-		<g id="scene1-cut5" display="none">
-			<set id="scene1-cut5-display" attributeName="display" to="inline" begin="scene1-cut4-display.end" dur="10s" />
-			<svg id="scene1-cut5-illustration">
-				<g id="scene1-cut5-background">
+		<g id="s1c5" display="none">
+			<set id="s1c5Display" attributeName="display" to="inline" begin="s1c4Display.end" dur="10s" />
+			<svg id="s1c5Illustration">
+				<g id="s1c5Background">
 					<use xlink:href="#bamboostalk1" transform="translate(70,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(0,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(50,365) scale(0.7) rotate(-4)" />
 				</g>
 				<use xlink:href="#flower" x="600" y="400" />
 				<use xlink:href="#panda-right-walking" x="130" y="420">
-					<animate id="scene1-cut5-pandawalking" attributeName="x" additive="replace"
-							values="130;1293" dur="10s" begin="scene1-cut5-display.begin" fill="freeze"/>
+					<animate id="s1c5Pandawalking" attributeName="x" additive="replace"
+							values="130;1293" dur="10s" begin="s1c5Display.begin" fill="freeze"/>
 				</use>
-				<g id="scene1-cut5-foreground" display="none">
+				<g id="s1c5Foreground" display="none">
 					<use xlink:href="#bamboostalk1" transform="translate(890,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(850,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(920,565) rotate(3)" />
 				</g>
 				<animate attributeName="viewBox" values="0 0 800 450;250 0 800 450" calcMode="spline"
 						dur="8s" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-						begin="scene1-cut5-display.begin" fill="freeze" />
+						begin="s1c5Display.begin" fill="freeze" />
 			</svg>
-			<text id="scene1-cut5-caption" class="caption" filter="url(#textbackground)">
+			<text id="s1c5Caption" class="caption" filter="url(#textbackground)">
       <tspan x="450" y="180">So Panda waited.</tspan>
 			</text>
 		</g>
@@ -1434,14 +1434,14 @@
 
 	<g id="scene2">
 		<desc>Scene 2: Panda returns and sees more flowers.</desc>
-		<g id="scene2-cut1" display="none">
-			<set id="scene2-cut1-display" attributeName="display" to="inline" begin="scene1-cut5-display.end" dur="10s" />
+		<g id="s2c1" display="none">
+			<set id="s2c1Display" attributeName="display" to="inline" begin="s1c5Display.end" dur="10s" />
 			<desc>Side shot of Panda walking in the woods with more flowers</desc>
-			<svg id="scene2-cut1-illustration">
+			<svg id="s2c1Illustration">
 				<animate attributeName="viewBox" additive="replace" calcMode="spline"
 						values="-2000 0 800 450;0 0 800 450" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-						dur="8s" fill="freeze" begin="scene2-cut1-display.begin" />
-				<g id="scene2-cut1-background">
+						dur="8s" fill="freeze" begin="s2c1Display.begin" />
+				<g id="s2c1Background">
 					<use xlink:href="#bamboostalk1" transform="translate(-570,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-500,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-550,365) scale(0.7) rotate(-4)" />
@@ -1453,47 +1453,47 @@
 				<use xlink:href="#flower" x="600" y="400" />
 				<use xlink:href="#flower" transform="translate(750,360) scale(0.8,0.6)" />
 				<use xlink:href="#panda-right-walking" x="-1614" y="420">
-					<animate id="scene2-cut1-pandawalking" attributeName="x" additive="replace"
-							values="-1614;130" dur="10s" begin="scene2-cut1-display.begin" fill="freeze"/>
+					<animate id="s2c1Pandawalking" attributeName="x" additive="replace"
+							values="-1614;130" dur="10s" begin="s2c1Display.begin" fill="freeze"/>
 				</use>
 				<use xlink:href="#flower" transform="translate(200,450) scale(1,1.2)" />
-				<g id="scene2-cut1-foreground">
+				<g id="s2c1Foreground">
 					<use xlink:href="#bamboostalk1" transform="translate(-830,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-870,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-800,565) rotate(3)" />
 				</g>
 			</svg>
-			<text id="scene2-cut1-caption" class="caption" filter="url(#textbackground)">
+			<text id="s2c1Caption" class="caption" filter="url(#textbackground)">
       <tspan x="270" y="200">A few days later, Panda was walking in the forest again.</tspan>
 				<tspan x="270" y="230">There were more red flowers, just like she was told.</tspan>
 			</text>
 		</g>
 
-		<g id="scene2-cut2" display="none">
+		<g id="s2c2" display="none">
   <!-- 4 frames: Panda giving flowers to her friends - Shiro-chan, Kuro-chan, Flaquita, and Moopsie -->
-			<set id="scene2-cut2-display" attributeName="display" to="inline" begin="scene2-cut1-display.end" dur="10s" />
-			<svg id="scene2-cut2-illustration" display="inline" viewBox="0 -1100 2400 1350">
+			<set id="s2c2Display" attributeName="display" to="inline" begin="s2c1Display.end" dur="10s" />
+			<svg id="s2c2Illustration" display="inline" viewBox="0 -1100 2400 1350">
 				<animate attributeName="viewBox" values="0 0 800 450;0 -1100 2400 1350" calcMode="spline"
-						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" dur="1.5s" begin="scene2-cut2-display.begin" />
+						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" dur="1.5s" begin="s2c2Display.begin" />
 				<use xlink:href="#bamboostalk2" transform="translate(200,500) rotate(3)" />
 				<use xlink:href="#panda-front" transform="translate(100,600) scale(1.5)" />
-				<g id="scene2-cut2-thoughtbubbles">
+				<g id="s2c2Thoughtbubbles">
 					<circle cx="280" cy="125" r="30" fill="white" stroke="black" display="none">
-						<animate id="scene2-bubble1-display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-cut2-display.begin" />
-						<set attributeName="display" to="inline" begin="scene2-bubble1-display.begin" end="scene2-cut2-display.end" />
+						<animate id="scene2-bubble1Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="s2c2Display.begin" />
+						<set attributeName="display" to="inline" begin="scene2-bubble1Display.begin" end="s2c2Display.end" />
 					</circle>
 					<circle cx="405" cy="90" r="50" fill="white" stroke="black" display="none">
-						<animate id="scene2-bubble2-display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-bubble1-display.end" />
-						<set attributeName="display" to="inline" begin="scene2-bubble2-display.begin" end="scene2-cut2-display.end" />
+						<animate id="scene2-bubble2Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="scene2-bubble1Display.end" />
+						<set attributeName="display" to="inline" begin="scene2-bubble2Display.begin" end="s2c2Display.end" />
 					</circle>
 				</g>
 				<g id="screens">
 					<g id="top-right-frame" opacity="0" display="none">
-						<animate id="scene2-frame4-display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-frame3-display.end+1s" />
-						<set attributeName="display" to="inline" begin="scene2-frame4-display.begin" end="scene2-cut2-display.end" />
+						<animate id="scene2-frame4Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="scene2-frame3Display.end+1s" />
+						<set attributeName="display" to="inline" begin="scene2-frame4Display.begin" end="s2c2Display.end" />
 						<rect id="top-right-border" x="1254" y="-1075" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="top-right-screen" x="1254" y="-1075" width="896" height="504" viewBox="-20 80 512 288">
 							<g id="frame4-panda" transform="translate(150,500)">
@@ -1502,23 +1502,23 @@
 								<use xlink:href="#panda-front-arm-right" transform="rotate(-70 90 -245)">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="0 90 -245;-70 90 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame4-display.begin" dur="1s" fill="freeze" />
+											begin="scene2-frame4Display.begin" dur="1s" fill="freeze" />
 								</use>
 								<use xlink:href="#head-front-static" transform="rotate(20 0 -245)">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="0 0 -245;20 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame4-display.begin" dur="1.5s" fill="freeze" />
+											begin="scene2-frame4Display.begin" dur="1.5s" fill="freeze" />
 								</use>
 								<animateTransform attributeName="transform" type="translate" calcMode="spline" additive="sum"
 										values="-50 0;-25 -10;0 0" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
-										begin="scene2-frame4-display.begin" dur="0.8s" fill="freeze" />
+										begin="scene2-frame4Display.begin" dur="0.8s" fill="freeze" />
 							</g>
 							<g id="frame4-moopsie" transform="translate(330,500)">
 								<use xlink:href="#moopsie-body" />
 								<use xlink:href="#moopsie-head-front-static" transform="rotate(-15 0 -225)">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="0 0 -225;-15 0 -225" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame4-display.begin" dur="0.5s" fill="freeze" />
+											begin="scene2-frame4Display.begin" dur="0.5s" fill="freeze" />
 								</use>
 								<use xlink:href="#bloom-front" transform="translate(0,-130)" />
 								<use xlink:href="#moopsie-arm-front" transform="translate(-75) rotate(-20 0 -225)" />
@@ -1527,9 +1527,9 @@
 						</svg>
 					</g>
 					<g id="bottom-right-frame" opacity="0" display="none">
-						<animate id="scene2-frame3-display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-frame2-display.end+1s" />
-						<set attributeName="display" to="inline" begin="scene2-frame3-display.begin" end="scene2-cut2-display.end" />
+						<animate id="scene2-frame3Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="scene2-frame2Display.end+1s" />
+						<set attributeName="display" to="inline" begin="scene2-frame3Display.begin" end="s2c2Display.end" />
 						<rect id="bottom-right-border" x="1254" y="-500" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="bottom-right-screen" x="1254" y="-500" width="896" height="504" viewBox="20 80 512 288">
 							<g id="frame3-shiro" transform="translate(400,500)">
@@ -1537,15 +1537,15 @@
 								<use xlink:href="#shiro-birthmark-front" />
 								<use xlink:href="#shiro-head-front-static" />
 								<use xlink:href="#shiro-arm-left">
-									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace" values="0 -70 -210;20 -70 -210" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" begin="scene2-cut2-frame3-panda.end" dur="0.5s" fill="remove" id="scene2-cut2-shiroLeftArmMove"/>
-									<animateTransform attributeName="transform" additive="replace" begin="scene2-cut2-shiroLeftArmMove.end" end="scene2-cut2-display.end" fill="remove" from="20 -70 -210" id="scene2-cut2-shiroLeftArmStick" to="20 -70 -210" type="rotate"/>
+									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace" values="0 -70 -210;20 -70 -210" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" begin="s2c2Frame3Panda.end" dur="0.5s" fill="remove" id="s2c2ShiroLeftArmMove"/>
+									<animateTransform attributeName="transform" additive="replace" begin="s2c2ShiroLeftArmMove.end" end="s2c2Display.end" fill="remove" from="20 -70 -210" id="s2c2ShiroLeftArmStick" to="20 -70 -210" type="rotate"/>
 								</use>
 								<use xlink:href="#shiro-arm-right">
-									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace" values="0 70 -210;70 70 -210" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" begin="scene2-cut2-frame3-panda.end" dur="0.5s" fill="remove" id="scene2-cut2-shiroRightArmMove"/>
-									<animateTransform attributeName="transform" additive="replace" begin="scene2-cut2-shiroRightArmMove.end" end="scene2-cut2-display.end" fill="remove" from="70 70 -210" id="scene2-cut2-shiroArmStick" to="70 70 -210" type="rotate"/>
+									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace" values="0 70 -210;70 70 -210" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" begin="s2c2Frame3Panda.end" dur="0.5s" fill="remove" id="s2c2ShiroRightArmMove"/>
+									<animateTransform attributeName="transform" additive="replace" begin="s2c2ShiroRightArmMove.end" end="s2c2Display.end" fill="remove" from="70 70 -210" id="s2c2ShiroArmStick" to="70 70 -210" type="rotate"/>
 								</use>
-								<animateTransform attributeName="transform" type="translate" calcMode="spline" additive="sum" values="0 0;0 -10" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" begin="scene2-cut2-frame3-panda.end" dur="0.8s" fill="remove" id="scene2-cut2-shiroMove"/>
-								<animateTransform attributeName="transform" additive="sum" begin="scene2-cut2-shiroMove.end" end="scene2-cut2-display.end" fill="remove" from="0 -10" id="scene2-cut2-shiroStick" to="0 -10" type="translate"/>
+								<animateTransform attributeName="transform" type="translate" calcMode="spline" additive="sum" values="0 0;0 -10" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" begin="s2c2Frame3Panda.end" dur="0.8s" fill="remove" id="s2c2ShiroMove"/>
+								<animateTransform attributeName="transform" additive="sum" begin="s2c2ShiroMove.end" end="s2c2Display.end" fill="remove" from="0 -10" id="s2c2ShiroStick" to="0 -10" type="translate"/>
 							</g>
 							<g id="frame3-panda" transform="translate(150,500)">
 								<use xlink:href="#body" />
@@ -1555,18 +1555,18 @@
 									<use xlink:href="#arm" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="-80 0 -245;-110 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame3-display.begin" dur="1s" fill="freeze" />
+											begin="scene2-frame3Display.begin" dur="1s" fill="freeze" />
 								</g>
-								<animateTransform id="scene2-cut2-frame3-panda" attributeName="transform" type="translate" calcMode="spline"
+								<animateTransform id="s2c2Frame3Panda" attributeName="transform" type="translate" calcMode="spline"
 										values="-50 0;-25 -10;0 0" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
-										begin="scene2-frame3-display.begin" dur="0.5s" fill="freeze" additive="sum"/>
+										begin="scene2-frame3Display.begin" dur="0.5s" fill="freeze" additive="sum"/>
 							</g>
 						</svg>
 					</g>
 					<g id="top-left-frame" opacity="0" display="none">
-						<animate id="scene2-frame2-display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-frame1-display.end+1s" />
-						<set attributeName="display" to="inline" begin="scene2-frame2-display.begin" end="scene2-cut2-display.end" />
+						<animate id="scene2-frame2Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="scene2-frame1Display.end+1s" />
+						<set attributeName="display" to="inline" begin="scene2-frame2Display.begin" end="s2c2Display.end" />
 						<rect id="top-left-border" x="250" y="-1075" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="top-left-screen" x="250" y="-1075" width="896" height="504" viewBox="20 60 512 288">
 							<g id="frame2-flaquita" transform="translate(400,500) scale(-1,1) ">
@@ -1578,13 +1578,13 @@
 										values="0 0 -245;-90 0 -245;0 0 -245"
 										keyTimes="&EaseOutTimes;;&EaseInOutTimes;"
 										keySplines="&EaseOutSplines;;&EaseInOutSplines;"
-										begin="scene2-frame2-display.begin" dur="1s" fill="freeze" />
+										begin="scene2-frame2Display.begin" dur="1s" fill="freeze" />
 							</use>
 							<g id="frame2-flower">
 								<use xlink:href="#bloom-front" transform="translate(160,380) scale(0.4,1)" />
 								<animateTransform id="panda-gives-flower" attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 										values="0 150 255;-90 150 255" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-										begin="scene2-frame2-display.begin" dur="0.5s" fill="freeze" />
+										begin="scene2-frame2Display.begin" dur="0.5s" fill="freeze" />
 								<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 										values="0 170 505;90 170 505" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
 										begin="panda-gives-flower.end" dur="1s" fill="freeze" />
@@ -1592,7 +1592,7 @@
 							<use id="frame2-flaquita-arm" xlink:href="#flaquita-arm" transform="translate(400,500) scale(-1,1)">
 								<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 										values="0 0 -265;-90 0 -265;-180 0 -265" keyTimes="0;0.33;1" keySplines="&CycleSplines;"
-										begin="scene2-frame2-display.begin" dur="1.5s" fill="freeze" />
+										begin="scene2-frame2Display.begin" dur="1.5s" fill="freeze" />
 							</use>
 							<g id="frame2-panda" transform="translate(150,500)">
 								<use xlink:href="#body" />
@@ -1602,9 +1602,9 @@
 						</svg>
 					</g>
 					<g id="bottom-left-frame" opacity="0" display="none">
-						<animate id="scene2-frame1-display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-bubble2-display.end" />
-						<set attributeName="display" to="inline" begin="scene2-frame1-display.begin" end="scene2-cut2-display.end" />
+						<animate id="scene2-frame1Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="scene2-bubble2Display.end" />
+						<set attributeName="display" to="inline" begin="scene2-frame1Display.begin" end="s2c2Display.end" />
 						<rect id="bottom-left-border" x="250" y="-500" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="bottom-left-screen" x="250" y="-500" width="896" height="504" viewBox="50 80 512 288">
 							<g id="frame1-kuro" transform="translate(400,500)">
@@ -1614,7 +1614,7 @@
 								<use xlink:href="#kuro-arm-left">
 									<animateTransform id="kuro-raises-left-arm" attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 -70 -210;140 -70 -210" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-											begin="scene2-frame1-display.begin" dur="1s" fill="freeze" />
+											begin="scene2-frame1Display.begin" dur="1s" fill="freeze" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 -70 -210;-20 -70 -210;0 -70 -210" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
 											begin="kuro-raises-left-arm.end" dur="0.5s" repeatDur="4s" fill="freeze" />
@@ -1622,13 +1622,13 @@
 								<use xlink:href="#kuro-arm-right">
 									<animateTransform id="kuro-raises-right-arm" attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 70 -210;-140 70 -210" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-											begin="scene2-frame1-display.begin" dur="1s" fill="freeze" />
+											begin="scene2-frame1Display.begin" dur="1s" fill="freeze" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 70 -210;20 70 -210;0 70 -210" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
 											begin="kuro-raises-right-arm.end" dur="0.5s" repeatDur="4s" fill="freeze" />
 								</use>
 								<animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 10;0 0"
-										begin="scene2-frame1-display.begin" dur="0.3s" repeatDur="5s" fill="freeze" />
+										begin="scene2-frame1Display.begin" dur="0.3s" repeatDur="5s" fill="freeze" />
 							</g>
 							<g id="frame1-panda" transform="translate(150,500)">
 								<use xlink:href="#body" />
@@ -1638,63 +1638,63 @@
 									<use xlink:href="#arm" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 0 -245;-100 0 -245" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-											begin="scene2-frame1-display.begin" dur="1s" fill="freeze" />
+											begin="scene2-frame1Display.begin" dur="1s" fill="freeze" />
 								</g>
 							</g>
 						</svg>
 					</g>
 				</g>
 			</svg>
-			<text id="scene2-cut2-caption" class="caption" filter="url(#textbackground)">
+			<text id="s2c2Caption" class="caption" filter="url(#textbackground)">
       <tspan x="100" y="180">&ldquo;Oh my!&rdquo; she said.</tspan>
 				<tspan x="100" y="210">&ldquo;I could have one for my hair, and I could give some to my friends.&rdquo;</tspan>
 			</text>
 		</g>
 
-		<g id="scene2-cut3" display="none">
-			<set id="scene2-cut3-display" attributeName="display" to="inline" begin="scene2-cut2-display.end" dur="7s" />
-			<svg id="scene2-cut3-illustration">
+		<g id="s2c3" display="none">
+			<set id="s2c3Display" attributeName="display" to="inline" begin="s2c2Display.end" dur="7s" />
+			<svg id="s2c3Illustration">
 				<animate attributeName="viewBox" values="0 0 800 450;80 20 704 396" calcMode="spline"
 						dur="6s" keyTimes="&EaseInOutTimes;" keySplines=".25 0 .75 1"
-						begin="scene2-cut3-display.begin" fill="freeze" />
-				<g id="scene2-cut3-flower" transform="translate(500,400) scale(3)">
+						begin="s2c3Display.begin" fill="freeze" />
+				<g id="s2c3Flower" transform="translate(500,400) scale(3)">
 					<use xlink:href="#stem" transform="translate(0 20) scale(1 1.25)" />
 					<use xlink:href="#bloom-front" transform="translate(-20 -60)" />
 				</g>
 			</svg>
-			<text id="scene2-cut3-caption" class="caption" filter="url(#textbackground)">
+			<text id="s2c3Caption" class="caption" filter="url(#textbackground)">
       <tspan x="50" y="100">Again the flower said, &ldquo;If you wait, there will be more.&rdquo;</tspan>
 			</text>
 		</g>
 
-		<g id="scene2-cut4" display="none">
-			<set id="scene2-cut4-display" attributeName="display" to="inline" begin="scene2-cut3-display.end" dur="10s" />
-			<svg id="scene2-cut4-illustration">
+		<g id="s2c4" display="none">
+			<set id="s2c4Display" attributeName="display" to="inline" begin="s2c3Display.end" dur="10s" />
+			<svg id="s2c4Illustration">
 				<animate attributeName="viewBox" values="0 0 800 450;250 0 800 450" calcMode="spline"
 						dur="8s" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-						begin="scene2-cut4-display.begin" fill="freeze" />
-				<g id="scene2-cut4-background">
+						begin="s2c4Display.begin" fill="freeze" />
+				<g id="s2c4Background">
 					<use xlink:href="#bamboostalk1" transform="translate(70,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(0,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(50,365) scale(0.7) rotate(-4)" />
 				</g>
-				<g id="scene2-cut4-flowerpatch">
+				<g id="s2c4Flowerpatch">
 					<use xlink:href="#flower" transform="translate(350,390) scale(-1.2,1)" />
 					<use xlink:href="#flower" x="600" y="400" />
 					<use xlink:href="#flower" transform="translate(750,360) scale(0.8,0.6)" />
 				</g>
 				<use xlink:href="#panda-right-walking" x="120" y="420">
-					<animate id="scene2-cut4-pandawalking" attributeName="x" additive="replace"
-							values="130;1293" dur="10s" begin="scene2-cut4-display.begin" fill="freeze"/>
+					<animate id="s2c4Pandawalking" attributeName="x" additive="replace"
+							values="130;1293" dur="10s" begin="s2c4Display.begin" fill="freeze"/>
 				</use>
 				<use xlink:href="#flower" transform="translate(200,450) scale(1,1.2)" />
-				<g id="scene2-cut4-foreground">
+				<g id="s2c4Foreground">
 					<use xlink:href="#bamboostalk1" transform="translate(-830,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-870,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-800,565) rotate(3)" />
 				</g>
 			</svg>
-			<text id="scene2-cut4-caption" class="caption" filter="url(#textbackground)">
+			<text id="s2c4Caption" class="caption" filter="url(#textbackground)">
       <tspan x="450" y="180">So Panda waited.</tspan>
 			</text>
 		</g>
@@ -1702,14 +1702,14 @@
 
 	<g id="scene3">
 		<desc>Scene 3: Panda returns and sees even more flowers.  She cannot carry them all.  She gets an idea.</desc>
-		<g id="scene3-cut1" display="none">
-			<set id="scene3-cut1-display" attributeName="display" to="inline" begin="scene2-cut4-display.end" dur="10s" />
-			<svg id="scene3-cut1-illustration">
+		<g id="s3c1" display="none">
+			<set id="s3c1Display" attributeName="display" to="inline" begin="s2c4Display.end" dur="10s" />
+			<svg id="s3c1Illustration">
 				<animate attributeName="viewBox" additive="replace" calcMode="spline" fill="freeze"
 						values="-2000 0 800 450;0 0 800 450"
-						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" dur="8s" begin="scene3-cut1-display.begin" />
-				<rect id="scene3-cut1-background-manyflowers-rear" x="-2000" y="200" width="2800" height="220" fill="url(#manyflowers-4)" />
-				<g id="scene3-cut1-background-bamboo">
+						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" dur="8s" begin="s3c1Display.begin" />
+				<rect id="s3c1BackgroundManyflowersRear" x="-2000" y="200" width="2800" height="220" fill="url(#manyflowers-4)" />
+				<g id="s3c1BackgroundBamboo">
 					<use xlink:href="#bamboostalk1" transform="translate(-570,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-500,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-550,365) scale(0.7) rotate(-4)" />
@@ -1717,81 +1717,81 @@
 					<use xlink:href="#bamboostalk2" transform="translate(0,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(50,365) scale(0.7) rotate(-4)" />
 				</g>
-				<rect id="scene3-cut1-background-manyflowers-mid" x="-2000" y="220" width="2800" height="220" fill="url(#manyflowers-3)" />
+				<rect id="s3c1BackgroundManyflowersMid" x="-2000" y="220" width="2800" height="220" fill="url(#manyflowers-3)" />
 				<use xlink:href="#panda-right-walking" x="120" y="420">
-					<animate id="scene3-cut1-pandawalking" attributeName="x" additive="replace"
-							values="-1614;130" dur="10s" begin="scene3-cut1-display.begin" fill="freeze"/>
+					<animate id="s3c1Pandawalking" attributeName="x" additive="replace"
+							values="-1614;130" dur="10s" begin="s3c1Display.begin" fill="freeze"/>
 				</use>
 				<use xlink:href="#flower" x="600" y="400" />
-				<rect id="scene3-cut1-foreground-manyflowers" x="-2000" y="240" width="2800" height="220" fill="url(#manyflowers-1)" />
-				<g id="scene3-cut1-foreground">
+				<rect id="s3c1ForegroundManyflowers" x="-2000" y="240" width="2800" height="220" fill="url(#manyflowers-1)" />
+				<g id="s3c1Foreground">
 					<use xlink:href="#bamboostalk1" transform="translate(-830,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-870,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-800,565) rotate(3)" />
 				</g>
 			</svg>
-			<text id="scene3-cut1-caption" class="caption" filter="url(#textbackground)">
+			<text id="s3c1Caption" class="caption" filter="url(#textbackground)">
       <tspan x="330" y="200">When Panda went for a walk a few days later,</tspan>
 				<tspan x="330" y="230">she saw many, many flowers.</tspan>
 			</text>
 		</g>
 
-		<g id="scene3-cut2" display="none">
+		<g id="s3c2" display="none">
   <!-- Tracking shot across the flowers ending on Flower -->
-			<set id="scene3-cut2-display" attributeName="display" to="inline" begin="scene3-cut1-display.end" dur="25s" />
-			<svg id="scene3-cut2-illustration" viewBox="620 230 272 153 ">
+			<set id="s3c2Display" attributeName="display" to="inline" begin="s3c1Display.end" dur="25s" />
+			<svg id="s3c2Illustration" viewBox="620 230 272 153 ">
 				<animate attributeName="viewBox" values="0 200 384 216;500 200 384 216;620 230 272 153"
 						keyTimes="0;.75;1" keySplines="&EaseInSplines;;&EaseOutSplines;"
-						begin="scene3-cut2-display.begin" dur="24s" fill="freeze" />
-				<rect id="scene3-cut2-background-manyflowers-rear" x="0" y="200" width="1200" height="220" fill="url(#manyflowers-4)" />
-				<rect id="scene3-cut2-background-manyflowers-mid" x="0" y="200" width="1200" height="220" fill="url(#manyflowers-3)" />
-				<g id="scene3-cut2-flower" transform="translate(800,380)">
+						begin="s3c2Display.begin" dur="24s" fill="freeze" />
+				<rect id="s3c2BackgroundManyflowers-rear" x="0" y="200" width="1200" height="220" fill="url(#manyflowers-4)" />
+				<rect id="s3c2BackgroundManyflowers-mid" x="0" y="200" width="1200" height="220" fill="url(#manyflowers-3)" />
+				<g id="s3c2Flower" transform="translate(800,380)">
 					<use xlink:href="#stem" transform="translate(0 20) scale(1 1.25)" />
 					<use xlink:href="#bloom-front" transform="translate(-20 -60)" />
 				</g>
 				<use xlink:href="#panda-rear" x="580" y="420" />
-				<rect id="scene3-cut2-foreground-manyflowers" x="0" y="240" width="1200" height="220" fill="url(#manyflowers-1)" />
+				<rect id="s3c2ForegroundManyflowers" x="0" y="240" width="1200" height="220" fill="url(#manyflowers-1)" />
 			</svg>
-			<g id="scene3-cut2-caption">
-				<text id="scene3-cut2-caption1" class="caption" filter="url(#textbackground)" display="none">
+			<g id="s3c2Caption">
+				<text id="s3c2Caption1" class="caption" filter="url(#textbackground)" display="none">
           <tspan x="50" y="100">&ldquo;Oh my!&rdquo; she said.</tspan>
 					<tspan x="50" y="130">&ldquo;There are enough flowers for my hair, my friends and more.&rdquo;</tspan>
-					<set id="scene3-cut2-text1-display" attributeName="display" to="inline" begin="scene3-cut2-display.begin" dur="8s" />
+					<set id="s3c2Text1Display" attributeName="display" to="inline" begin="s3c2Display.begin" dur="8s" />
 				</text>
-				<text id="scene3-cut2-caption2" class="caption" filter="url(#textbackground)" display="none">
+				<text id="s3c2Caption2" class="caption" filter="url(#textbackground)" display="none">
         <tspan x="50" y="100">&ldquo;But I can't carry them all!  What should I do?&rdquo;</tspan>
-					<set id="scene3-cut2-text2-display" attributeName="display" to="inline" begin="scene3-cut2-text1-display.end" dur="7s" />
+					<set id="s3c2Text2Display" attributeName="display" to="inline" begin="s3c2Text1Display.end" dur="7s" />
 				</text>
-				<text id="scene3-cut2-caption3" class="caption" filter="url(#textbackground)" display="none">
+				<text id="s3c2Caption3" class="caption" filter="url(#textbackground)" display="none">
         <tspan x="50" y="100">Again the flower said, &ldquo;If you wait, there will be more.&rdquo;</tspan>
-					<set id="scene3-cut2-text3-display" attributeName="display" to="inline" begin="scene3-cut2-text2-display.end" dur="10s" />
+					<set id="s3c2Text3Display" attributeName="display" to="inline" begin="s3c2Text2Display.end" dur="10s" />
 				</text>
 			</g>
 		</g>
 
-		<g id="scene3-cut3" display="none">
-			<set id="scene3-cut3-display" attributeName="display" to="inline" begin="scene3-cut2-display.end" dur="5s" />
-			<svg id="scene3-cut3-illustration" viewBox="65 -40 400 225">
-				<g id="scene3-cut3-pandaThinks" transform="translate(150,420)">
+		<g id="s3c3" display="none">
+			<set id="s3c3Display" attributeName="display" to="inline" begin="s3c2Display.end" dur="5s" />
+			<svg id="s3c3Illustration" viewBox="65 -40 400 225">
+				<g id="s3c3PandaThinks" transform="translate(150,420)">
 					<use xlink:href="#leg" x="-40" />
 					<use xlink:href="#leg" x="40" />
 					<use xlink:href="#torso-front" />
 					<use xlink:href="#head-front-static" transform="rotate(10 0 -245)">
-						<animateTransform id="scene3-cut3-pandaHead-eureka" attributeName="transform" type="rotate" calcMode="spline" values="0 0 -245;-10 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" dur="0.3s" begin="scene3-cut3-pandaArm-tap.end" additive="sum" fill="remove" />
-						<animateTransform attributeName="transform" additive="replace" begin="scene3-cut3-pandaHead-eureka.end" dur="2s" end="scene3-cut3-display.end" fill="remove" from="0 0 -245" id="scene3-cut3-pandaHead-eurekaStick" to="0 0 -245" type="rotate"/>
+						<animateTransform id="s3c3PandaHeadEureka" attributeName="transform" type="rotate" calcMode="spline" values="0 0 -245;-10 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" dur="0.3s" begin="s3c3PandaArmTap.end" additive="sum" fill="remove" />
+						<animateTransform attributeName="transform" additive="replace" begin="s3c3PandaHeadEureka.end" dur="2s" end="s3c3Display.end" fill="remove" from="0 0 -245" id="s3c3PandaHeadEurekaStick" to="0 0 -245" type="rotate"/>
 					</use>
-					<use xlink:href="#arm-front" id="scene3-cut3-arm-left" x="-90" transform="rotate(15 -90 -245)" />
-					<use xlink:href="#arm-front" id="scene3-cut3-arm-right" x="90" transform="rotate(185 90 -245)">
-						<animateTransform id="scene3-cut3-pandaArm-tap" attributeName="transform" type="rotate" calcMode="spline" additive="replace"
+					<use xlink:href="#arm-front" id="s3c3ArmLeft" x="-90" transform="rotate(15 -90 -245)" />
+					<use xlink:href="#arm-front" id="s3c3ArmRight" x="90" transform="rotate(185 90 -245)">
+						<animateTransform id="s3c3PandaArmTap" attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 								values="175 90 -245;185 90 -245;175 90 -245" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
-								dur="0.5s" begin="scene3-cut3-display.begin" repeatDur="4.5s" fill="remove" />
-						<animateTransform id="scene3-cut3-pandaArm-eureka" attributeName="transform" type="rotate" calcMode="spline" additive="sum"
+								dur="0.5s" begin="s3c3Display.begin" repeatDur="4.5s" fill="remove" />
+						<animateTransform id="s3c3PandaArmEureka" attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 								values="0 90 -245;20 90 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-								dur="0.5s" begin="scene3-cut3-pandaArm-tap.end" fill="freeze" />
+								dur="0.5s" begin="s3c3PandaArmTap.end" fill="freeze" />
 					</use>
 				</g>
 			</svg>
-			<text id="scene3-cut3-caption" class="caption" filter="url(#textbackground)">
+			<text id="s3c3Caption" class="caption" filter="url(#textbackground)">
 				<tspan x="450" y="100">Then Panda had an idea.</tspan>
 			</text>
 		</g>
@@ -1799,19 +1799,19 @@
 
 	<g id="scene4">
 		<desc>Scene 4: Panda and her friends come back and have a picnic in the middle of the flowers.</desc>
-		<g id="scene4-cut1" display="none">
-			<set id="scene4-cut1-display" attributeName="display" to="inline" begin="scene3-cut3-display.end" dur="10s" />
-			<g id="scene4-cut1-illustration">
-				<rect id="scene4-cut1-background-manyflowers-rear" x="0" y="250" width="800" height="220" fill="url(#allflowers-3-moving)" />
+		<g id="s4c1" display="none">
+			<set id="s4c1Display" attributeName="display" to="inline" begin="s3c3Display.end" dur="10s" />
+			<g id="s4c1Illustration">
+				<rect id="s4c1BackgroundManyflowersRear" x="0" y="250" width="800" height="220" fill="url(#allflowers-3-moving)" />
 				<g id="background-bamboo">
 					<use xlink:href="#bamboostalk1" transform="translate(70,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(0,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(50,365) scale(0.7) rotate(-4)" />
 					<animateTransform attributeName="transform" type="translate" additive="sum"
-							from="1162.66" to="0" dur="10s" begin="scene4-cut1-display.begin" />
+							from="1162.66" to="0" dur="10s" begin="s4c1Display.begin" />
 				</g>
-				<rect id="scene4-cut1-background-manyflowers-mid" x="0" y="285" width="800" height="220" fill="url(#allflowers-2-moving)" />
-				<g id="scene4-cut1-pandas" transform="translate(0,420)">
+				<rect id="s4c1BackgroundManyflowersMid" x="0" y="285" width="800" height="220" fill="url(#allflowers-2-moving)" />
+				<g id="s4c1Pandas" transform="translate(0,420)">
 					<use xlink:href="#panda-right-walking" x="220" />
 					<use xlink:href="#shiro-right-walking" x="120" />
 					<use xlink:href="#flaquita-right-walking" x="25" />
@@ -1820,34 +1820,34 @@
 				</g>
 				<use xlink:href="#flower" x="600" y="400">
 					<animateTransform attributeName="transform" type="translate" additive="sum"
-							from="1162.66" to="0" dur="10s" begin="scene4-cut1-display.begin" />
+							from="1162.66" to="0" dur="10s" begin="s4c1Display.begin" />
 				</use>
-				<rect id="scene4-cut1-foreground-manyflowers" x="0" y="350" width="800" height="220" fill="url(#allflowers-1-moving)" />
-				<g id="scene4-cut1-foreground">
+				<rect id="s4c1ForegroundManyflowers" x="0" y="350" width="800" height="220" fill="url(#allflowers-1-moving)" />
+				<g id="s4c1Foreground">
 					<use xlink:href="#bamboostalk1" transform="translate(-830,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-870,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(-800,565) rotate(3)" />
 					<animateTransform attributeName="transform" type="translate" additive="sum"
-							from="1162.66" to="0" dur="10s" begin="scene4-cut1-display.begin" />
+							from="1162.66" to="0" dur="10s" begin="s4c1Display.begin" />
 				</g>
 			</g>
-			<text id="scene4-cut1-caption" class="caption" filter="url(#textbackground)">
+			<text id="s4c1Caption" class="caption" filter="url(#textbackground)">
       <tspan x="270" y="200">A few days later, Panda went to the forest with her friends.</tspan>
 				<tspan x="270" y="230">Flowers were blooming everywhere!</tspan>
 			</text>
 		</g>
 
-		<g id="scene4-cut2" display="none">
-			<set id="scene4-cut2-display" attributeName="display" to="inline" begin="scene4-cut1-display.end" dur="15s" />
-			<svg id="scene4-cut2-illustration" viewBox="-800 -900 3200 1800">
+		<g id="s4c2" display="none">
+			<set id="s4c2Display" attributeName="display" to="inline" begin="s4c1Display.end" dur="15s" />
+			<svg id="s4c2Illustration" viewBox="-800 -900 3200 1800">
 				<animate attributeName="viewBox" from="0 0 800 450" to="-800 -900 3200 1800" fill="freeze"
-						begin="scene4-cut2-display.begin" dur="10s" />
+						begin="s4c2Display.begin" dur="10s" />
       <!-- Overhead shot pulling away of Panda and friends in the flowers -->
 				<g id="ground">
 					<rect x="-1600" y="-1800" width="6400" height="3600" fill="maroon" />
 					<rect x="-1600" y="-1800" width="6400" height="3600" fill="url(#allflowers-top)" />
 				</g>
-				<g id="scene4-cut2-pandas">
+				<g id="s4c2Pandas">
 					<use xlink:href="#panda-top" transform="translate(600,100) rotate(-120)" />
 					<use xlink:href="#shiro-top" transform="translate(300,150) rotate(-70)" />
 					<use xlink:href="#kuro-top" transform="translate(280,450) rotate(40)" />
@@ -1871,32 +1871,32 @@
 					<use xlink:href="#treetop-1" x="2350" y="875" />
 				</g>
 			</svg>
-			<text id="scene4-cut2-caption" class="caption" filter="url(#textbackground)">
+			<text id="s4c2Caption" class="caption" filter="url(#textbackground)">
       <tspan x="200" y="50">The flowers were like a red carpet on the floor of the forest.</tspan>
 				<tspan x="200" y="80">The whole forest smelled sweet, and the sun was warm.</tspan>
 			</text>
 		</g>
 
-		<g id="scene4-cut3" display="none">
-			<set id="scene4-cut3-display" attributeName="display" to="inline" begin="scene4-cut2-display.end" dur="15s" />
-			<g id="scene4-cut3-illustration">
-				<rect id="scene4-cut3-background-manyflowers-rear" x="0" y="250" width="800" height="220" fill="url(#allflowers-3)" />
-				<g id="scene4-cut3-background-bamboo">
+		<g id="s4c3" display="none">
+			<set id="s4c3Display" attributeName="display" to="inline" begin="s4c2Display.end" dur="15s" />
+			<g id="s4c3Illustration">
+				<rect id="s4c3BackgroundManyflowersRear" x="0" y="250" width="800" height="220" fill="url(#allflowers-3)" />
+				<g id="s4c3BackgroundBamboo">
 					<use xlink:href="#bamboostalk1" transform="translate(420,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(350,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(400,365) scale(0.7) rotate(-4)" />
 				</g>
-				<rect id="scene4-cut3-background-manyflowers-mid" x="0" y="285" width="800" height="220" fill="url(#allflowers-2)" />
-				<g id="scene4-cut3-pandas" transform="translate(0,480)">
-					<g id="scene4-cut3-panda-front" transform="translate(500)">
+				<rect id="s4c3BackgroundManyflowersMid" x="0" y="285" width="800" height="220" fill="url(#allflowers-2)" />
+				<g id="s4c3Pandas" transform="translate(0,480)">
+					<g id="s4c3PandaFront" transform="translate(500)">
 						<use xlink:href="#torso-front" />
 						<use xlink:href="#head-front-static" transform="rotate(10 0 -245)">
 							<animateTransform attributeName="transform" type="rotate" additive="sum"
 									values="0 0 -245;5 0 -245;0 0 -245"
-									begin="scene4-cut3-display.begin" dur="0.5s" repeatDur="indefinite" />
+									begin="s4c3Display.begin" dur="0.5s" repeatDur="indefinite" />
 							<animateTransform attributeName="transform" type="translate" additive="sum"
 									values="0 0;0 -3;0 0"
-									begin="scene4-cut3-display.begin" dur="0.3s" repeatDur="indefinite" />
+									begin="s4c3Display.begin" dur="0.3s" repeatDur="indefinite" />
 						</use>
 						<use xlink:href="#arm-front" x="-90" transform="rotate(15 -90 -245)" />
 						<g id="panda-munchie-arm" transform="translate(90) rotate(40 0 -245)">
@@ -1904,119 +1904,119 @@
 							<use xlink:href="#arm-front"/>
 							<animateTransform attributeName="transform" type="rotate" additive="sum"
 									values="0 0 -245;5 0 -245;0 0 -245"
-									begin="scene4-cut3-display.begin" dur="0.5s" repeatDur="indefinite" />
+									begin="s4c3Display.begin" dur="0.5s" repeatDur="indefinite" />
 						</g>
 					</g>
-					<g id="scene4-cut3-shiro-right" transform="translate(300,-40)">
+					<g id="s4c3ShiroRight" transform="translate(300,-40)">
 						<use xlink:href="#shiro-torso-side" />
 						<use xlink:href="#shiro-head-right-static" />
 						<use xlink:href="#shiro-arm">
-							<animateTransform id="scene4-cut3-shiro-raises-arm" attributeName="transform" type="rotate"
+							<animateTransform id="s4c3ShiroRaisesArm" attributeName="transform" type="rotate"
 									values="0 0 -215;-30 0 -215;-30 0 -215;-10 0 -215;0 0 -215;-1 0 -215"
 									keyTimes="0;.4;.5;.7;.9;1" additive="sum" calcMode="spline"
 									keySplines="&EaseInSplines;;&EaseInOutSplines;;&EaseInOutSplines;;&EaseOutSplines;;&EaseInOutSplines;"
-									begin="scene4-cut3-shiro-sits.begin+0.1s" dur="1.3s" fill="freeze" />
+									begin="s4c3ShiroSits.begin+0.1s" dur="1.3s" fill="freeze" />
 						</use>
-						<animateTransform id="scene4-cut3-shiro-sits" attributeName="transform" type="translate"
+						<animateTransform id="s4c3ShiroSits" attributeName="transform" type="translate"
 								values="0 0;0 -10;-10 40" keyTimes="0;.25;1"
 								keySplines="&EaseInOutSplines;;&EaseInOutSplines;"
-								begin="scene4-cut3-display.begin+0.8s" dur="1s" fill="freeze" calcMode="spline" additive="sum"/>
+								begin="s4c3Display.begin+0.8s" dur="1s" fill="freeze" calcMode="spline" additive="sum"/>
 					</g>
-					<g id="scene4-cut3-flaquita-right" transform="translate(50,-15)">
+					<g id="s4c3FlaquitaRight" transform="translate(50,-15)">
 						<use xlink:href="#flaquita-leg" />
 						<use xlink:href="#flaquita-body" />
 						<use xlink:href="#flaquita-head-right-static" />
 						<use xlink:href="#flaquita-arm">
-							<animateTransform id="scene4-cut3-flaquita-raises-arm" attributeName="transform" type="rotate"
+							<animateTransform id="s4c3FlaquitaRaisesArm" attributeName="transform" type="rotate"
 									values="0 0 -285;-40 0 -285;-40 0 -285;-10 0 -285;0 0 -285;-1 0 -285"
 									keyTimes="0;.4;.5;.7;.9;1" additive="sum" calcMode="spline"
 									keySplines="&EaseInSplines;;&EaseInOutSplines;;&EaseInOutSplines;;&EaseOutSplines;;&EaseInOutSplines;"
-									begin="scene4-cut3-flaquita-sits.begin+0.2s" dur="1.4s" fill="freeze" />
+									begin="s4c3FlaquitaSits.begin+0.2s" dur="1.4s" fill="freeze" />
 						</use>
-						<animateTransform id="scene4-cut3-flaquita-sits" attributeName="transform" type="translate"
+						<animateTransform id="s4c3FlaquitaSits" attributeName="transform" type="translate"
 								values="0 0;0 -10;-10 40" keyTimes="0;.25;1"
 								keySplines="&EaseInOutSplines;;&EaseInOutSplines;"
-								begin="scene4-cut3-display.begin+1s" dur="1.2s" fill="freeze" calcMode="spline" additive="sum" />
+								begin="s4c3Display.begin+1s" dur="1.2s" fill="freeze" calcMode="spline" additive="sum" />
 					</g>
-					<g id="scene4-cut3-kuro-right" transform="translate(280)">
+					<g id="s4c3KuroRight" transform="translate(280)">
 						<use xlink:href="#kuro-torso-side" />
 						<use xlink:href="#kuro-head-right-static">
 							<animateTransform attributeName="transform" type="rotate" additive="sum"
 									values="0 0 -215;3 0 -215;0 0 -215"
-									begin="scene4-cut3-display.begin" dur="0.4s" repeatDur="indefinite" />
+									begin="s4c3Display.begin" dur="0.4s" repeatDur="indefinite" />
 						</use>
 						<g id="kuro-munchie-arm" transform="rotate(-60 0 -215)">
 							<use xlink:href="#bamboo-munchie" transform="translate(0 -30) rotate(-150 0 -80)" />
 							<use xlink:href="#kuro-arm" />
 							<animateTransform attributeName="transform" type="rotate" additive="sum"
 									values="0 0 -215;-3 0 -215;0 0 -215"
-									begin="scene4-cut3-display.begin" dur="0.5s" repeatDur="indefinite" />
+									begin="s4c3Display.begin" dur="0.5s" repeatDur="indefinite" />
 						</g>
 					</g>
-					<g id="scene4-cut3-moopsie-left" transform="translate(690,-40) scale(-1,1)">
+					<g id="s4c3MoopsieLeft" transform="translate(690,-40) scale(-1,1)">
 						<use xlink:href="#moopsie-leg" />
 						<use xlink:href="#moopsie-body" />
 						<use xlink:href="#moopsie-head-right-static" />
 						<use xlink:href="#moopsie-arm">
-							<animateTransform id="scene4-cut3-moopsie-raises-arm" attributeName="transform" type="rotate"
+							<animateTransform id="s4c3MoopsieRaisesArm" attributeName="transform" type="rotate"
 									values="0 0 -215;-40 0 -215;-40 0 -215;-10 0 -215;0 0 -215;-1 0 -215"
 									keyTimes="0;.4;.5;.7;.9;1" additive="sum" calcMode="spline"
 									keySplines="&EaseInSplines;;&EaseInOutSplines;;&EaseInOutSplines;;&EaseOutSplines;;&EaseInOutSplines;"
-									begin="scene4-cut3-moopsie-sits.begin" dur="0.8s" fill="freeze" />
+									begin="s4c3MoopsieSits.begin" dur="0.8s" fill="freeze" />
 						</use>
-						<animateTransform id="scene4-cut3-moopsie-sits" attributeName="transform" type="translate"
+						<animateTransform id="s4c3MoopsieSits" attributeName="transform" type="translate"
 								values="0 0;0 -5;-20 60" keyTimes="0;.2;1"
 								keySplines="&EaseInOutSplines;;&EaseInOutSplines;"
-								begin="scene4-cut3-display.begin+1.5s" dur="0.5s" fill="freeze" calcMode="spline" additive="sum" />
+								begin="s4c3Display.begin+1.5s" dur="0.5s" fill="freeze" calcMode="spline" additive="sum" />
 					</g>
 				</g>
 				<use xlink:href="#flower" x="600" y="400" />
 				<rect id="foreground-manyflowers" x="0" y="350" width="800" height="220" fill="url(#allflowers-1)" />
-				<g id="scene4-cut3-foreground">
+				<g id="s4c3Foreground">
 					<use xlink:href="#bamboostalk1" transform="translate(-10,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-50,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(20,565) rotate(3)" />
 				</g>
 			</g>
-			<text id="scene4-cut3-caption1" class="caption" filter="url(#textbackground)" display="none">
+			<text id="s4c3Caption1" class="caption" filter="url(#textbackground)" display="none">
       <tspan x="270" y="50">So Panda and her friends sat down and had a picnic.</tspan>
-				<set id="scene4-cut3-caption1-display" attributeName="display" to="inline" begin="scene4-cut3-display.begin" dur="6s" />
+				<set id="s4c3Caption1Display" attributeName="display" to="inline" begin="s4c3Display.begin" dur="6s" />
 			</text>
-			<text id="scene4-cut3-caption2" class="caption" filter="url(#textbackground)" display="none">
+			<text id="s4c3Caption2" class="caption" filter="url(#textbackground)" display="none">
       <tspan x="270" y="80">And it was a very nice day.</tspan>
-				<set id="scene4-cut3-caption2-display" attributeName="display" to="inline" begin="scene4-cut3-caption1-display.end" dur="9s" />
+				<set id="s4c3Caption2Display" attributeName="display" to="inline" begin="s4c3-caption1Display.end" dur="9s" />
 			</text>
 		</g>
 
-		<g id="scene4-cut4" display="none">
-			<set id="scene4-cut4-display" attributeName="display" to="inline" begin="scene4-cut3-display.end" end="menuflowerbutton.click" />
-			<g id="scene4-cut4-illustration">
-				<g id="scene4-cut4-background" transform="translate(-300)">
+		<g id="s4c4" display="none">
+			<set id="s4c4Display" attributeName="display" to="inline" begin="s4c3Display.end" end="menuflowerbutton.click" />
+			<g id="s4c4Illustration">
+				<g id="s4c4Background" transform="translate(-300)">
 					<use xlink:href="#bamboostalk1" transform="translate(420,340) scale(0.6) rotate(5)" />
 					<use xlink:href="#bamboostalk2" transform="translate(350,350) scale(0.6) rotate(-3)" />
 					<use xlink:href="#bamboostalk1" transform="translate(400,365) scale(0.7) rotate(-4)" />
 				</g>
 				<use xlink:href="#flower" x="400" y="400" />
-				<g id="scene4-cut4-foreground" transform="translate(-400)">
+				<g id="s4c4Foreground" transform="translate(-400)">
 					<use xlink:href="#bamboostalk1" transform="translate(-10,540) rotate(-4)" />
 					<use xlink:href="#bamboostalk1" transform="translate(-50,550) rotate(-2)" />
 					<use xlink:href="#bamboostalk2" transform="translate(20,565) rotate(3)" />
 				</g>
 			</g>
-			<text id="scene4-cut4-caption" class="caption" filter="url(#textbackground)">
+			<text id="s4c4Caption" class="caption" filter="url(#textbackground)">
       <tspan x="450" y="180">The end.</tspan>
-				<set attributeName="display" begin="end-menu.click" end="endCaptionFadeIn.begin;scene4-cut4-display.begin" to="none" id="endCaptionDisplay"/>
+				<set attributeName="display" begin="end-menu.click" end="endCaptionFadeIn.begin;s4c4Display.begin" to="none" id="endCaptionDisplay"/>
 				<animate attributeName="opacity" begin="creditsDisplay.end" dur="1" from="0" id="endCaptionFadeIn" to="1"/>
 			</text>
 		</g>
-		
-		<svg id="credits" display="none" opacity="1" onload="initCredits(evt)" height="450" width="600" x="200" y="0"/>
-		
-		<g id="end-menu" display="none">
-			<use xlink:href="#creditsbutton" id="menucreditsbutton" onclick="pandaCredits.rollCredits()" x="925" y="300"/>
+
+		<!-- <svg id="credits" display="none" opacity="1" onload="initCredits(evt)" height="450" width="600" x="200" y="0"/> -->
+
+		<g id="endMenu" display="none">
+			<!-- <use xlink:href="#creditsbutton" id="menucreditsbutton" onclick="pandaCredits.rollCredits()" x="925" y="300"/> -->
 			<use xlink:href="#flowerbutton" id="menuflowerbutton" x="925" y="150"/>
-			<animateMotion additive="sum" begin="scene4-cut4-display.begin+2s; creditsDisplay.end" dur="1s" fill="freeze" from="0 0" id="menuIn" to="-200 0"/>
-			<animateMotion additive="sum" begin="end-menu.click" dur="1s" from="0 0" id="menuOut" to="200 0"/>
+			<animate attributeName="x" additive="sum" begin="s4c4Display.begin+2s; creditsDisplay.end" dur="1s" fill="freeze" from="0" id="menuIn" to="-200"/>
+			<animate attributeName="x" additive="sum" begin="endMenu.click" dur="1s" from="0" id="menuOut" to="200"/>
 			<set attributeName="display" begin="menuIn.begin" end="menuOut.end" id="menuDisplay" to="inline"/>
 		</g>
 	</g>
