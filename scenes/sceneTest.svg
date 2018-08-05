@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+
+<svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" y="0"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="scene1" display="none">
+    <set attributeName="display" to="inherit" begin="0s" dur="2s" id="scene1display"/>
+    <circle cx="0" cy="0" r="100" fill="red">
+        <animate attributeName="cx" from="0" to="100" dur="3s" repeatCount="2"/>
+    </circle>
+  </g>
+  <g id="scene2" display="none">
+    <set attributeName="display" to="inherit" begin="scene1display.end" id="scene2display"/>
+    <rect x="50%" y="50%" width="50%" height="50%" fill="blue">
+      <animate attributeName="y" from="50%" to="0%" begin="scene2display.begin" dur="3s" repeatCount="2"/>
+    </rect>
+  </g>
+</svg>
