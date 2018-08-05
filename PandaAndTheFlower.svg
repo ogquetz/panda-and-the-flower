@@ -139,12 +139,12 @@
 
     <!-- Ear -->
 		<ellipse id="ear-side" cx="-15" cy="-370" rx="20" ry="30" fill="black" />
-		<ellipse id="ear-front" cx="0" cy="-370" rx="30" ry="30" fill="black" />
+		<ellipse id="earFront" cx="0" cy="-370" rx="30" ry="30" fill="black" />
 		<ellipse id="ear-top" cx="0" cy="-15" rx="30" ry="20" fill="black" />
 
     <!-- Eyes -->
 		<ellipse id="eye-side" cx="35" cy="-335" rx="10" ry="25" fill="black" />
-		<ellipse id="eye-front" cx="0" cy="-335" rx="15" ry="25" fill="black" />
+		<ellipse id="eyeFront" cx="0" cy="-335" rx="15" ry="25" fill="black" />
 		<ellipse id="eye-top" cx="0" cy="35" rx="15" ry="10" fill="black" />
 
     <!-- Nose -->
@@ -160,19 +160,19 @@
 		</g>
 
     <!-- Stationary full head facing front -->
-		<g id="head-front-static">
-			<use id="head-front-static-left-ear" xlink:href="#ear-front" transform="translate(-60,0)" />
-			<use id="head-front-static-right-ear" xlink:href="#ear-front" transform="translate(60,0)" />
+		<g id="headFront-static">
+			<use id="headFront-static-left-ear" xlink:href="#earFront" transform="translate(-60,0)" />
+			<use id="headFront-static-right-ear" xlink:href="#earFront" transform="translate(60,0)" />
 			<use xlink:href="#head" />
-			<use id="left-eye" xlink:href="#eye-front" transform="translate(-30,0)" />
-			<use id="right-eye" xlink:href="#eye-front" transform="translate(30,0)" />
+			<use id="left-eye" xlink:href="#eyeFront" transform="translate(-30,0)" />
+			<use id="right-eye" xlink:href="#eyeFront" transform="translate(30,0)" />
 			<use id="front-nose" xlink:href="#nose" transform="translate(-75,0)" />
 		</g>
 
     <!-- Stationary full head facing back -->
 		<g id="head-rear-static">
-			<use id="head-rear-static-left-ear" xlink:href="#ear-front" transform="translate(-60,0)" />
-			<use id="head-rear-static-right-ear" xlink:href="#ear-front" transform="translate(60,0)" />
+			<use id="head-rear-static-left-ear" xlink:href="#earFront" transform="translate(-60,0)" />
+			<use id="head-rear-static-right-ear" xlink:href="#earFront" transform="translate(60,0)" />
 			<use xlink:href="#head" />
 		</g>
 
@@ -194,14 +194,14 @@
 
     <!-- Arm -->
 		<ellipse id="arm" cx="0" cy="-175" rx="30" ry="60" fill="black" />
-		<ellipse id="arm-front" cx="0" cy="-175" rx="25" ry="60" fill="black" />
+		<ellipse id="armFront" cx="0" cy="-175" rx="25" ry="60" fill="black" />
 		<ellipse id="arm-top" cx="0" cy="0" rx="35" ry="30" fill="black" />
 
     <!-- Leg -->
 		<ellipse id="leg" cx="0" cy="-60" rx="30" ry="60" fill="black" />
 
     <!-- Torso -->
-		<g id="torso-front">
+		<g id="torsoFront">
 			<use xlink:href="#body" />
 		</g>
 		<g id="torso-rear">
@@ -243,13 +243,13 @@
 					keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
 		</g>
 
-		<g id="panda-front">
+		<g id="pandaFront">
 			<use xlink:href="#leg" x="-40" />
 			<use xlink:href="#leg" x="40" />
 			<use xlink:href="#body" />
-			<use xlink:href="#head-front-static" />
-			<use xlink:href="#arm-front" id="panda-front-arm-left" x="-90" transform="rotate(15 -90 -245)" />
-			<use xlink:href="#arm-front" id="panda-front-arm-right" x="90" transform="rotate(-15 90 -245) " />
+			<use xlink:href="#headFront-static" />
+			<use xlink:href="#armFront" id="pandaFront-arm-left" x="-90" transform="rotate(15 -90 -245)" />
+			<use xlink:href="#armFront" id="pandaFront-arm-right" x="90" transform="rotate(-15 90 -245) " />
 		</g>
 
 		<g id="panda-rear">
@@ -257,8 +257,8 @@
 			<use xlink:href="#leg" x="40" />
 			<use xlink:href="#torso-rear" />
 			<use xlink:href="#head-rear-static" />
-			<use xlink:href="#arm-front" id="panda-rear-arm-left" x="-90" transform="rotate(15 -90 -245)" />
-			<use xlink:href="#arm-front" id="panda-rear-arm-right" x="90" transform="rotate(-15 90 -245) " />
+			<use xlink:href="#armFront" id="panda-rear-arm-left" x="-90" transform="rotate(15 -90 -245)" />
+			<use xlink:href="#armFront" id="panda-rear-arm-right" x="90" transform="rotate(-15 90 -245) " />
 		</g>
 
 		<g id="panda-top">
@@ -281,12 +281,12 @@
 
     <!-- Ear -->
 		<ellipse id="shiro-ear-side" cx="-15" cy="-305" rx="15" ry="25" fill="black" />
-		<ellipse id="shiro-ear-front" cx="0" cy="-305" rx="20" ry="25" fill="black" />
+		<ellipse id="shiro-earFront" cx="0" cy="-305" rx="20" ry="25" fill="black" />
 		<ellipse id="shiro-ear-top" cx="0" cy="-15" rx="20" ry="15" fill="black" />
 
     <!-- Eyes -->
 		<ellipse id="shiro-eye-side" cx="30" cy="-280" rx="15" ry="22" fill="black" />
-		<ellipse id="shiro-eye-front" cx="0" cy="-280" rx="17" ry="22" fill="black" />
+		<ellipse id="shiro-eyeFront" cx="0" cy="-280" rx="17" ry="22" fill="black" />
 		<ellipse id="shiro-eye-top" cx="0" cy="30" rx="17" ry="15" fill="black" />
 
     <!-- Nose -->
@@ -302,13 +302,13 @@
 		</g>
 
     <!-- Stationary full head facing front -->
-		<g id="shiro-head-front-static">
-			<use id="shiro-left-ear" xlink:href="#shiro-ear-front" x="-60" />
-			<use id="shiro-right-ear" xlink:href="#shiro-ear-front" x="60" />
+		<g id="shiro-headFront-static">
+			<use id="shiro-left-ear" xlink:href="#shiro-earFront" x="-60" />
+			<use id="shiro-right-ear" xlink:href="#shiro-earFront" x="60" />
 			<use xlink:href="#shiro-head" />
-			<use id="shiro-head-front-static-left-eye" xlink:href="#shiro-eye-front" x="-27" />
-			<use id="shiro-head-front-static-right-eye" xlink:href="#shiro-eye-front" x="27" />
-			<use id="shiro-head-front-static-front-nose" xlink:href="#shiro-nose" />
+			<use id="shiro-headFront-static-left-eye" xlink:href="#shiro-eyeFront" x="-27" />
+			<use id="shiro-headFront-static-right-eye" xlink:href="#shiro-eyeFront" x="27" />
+			<use id="shiro-headFront-staticFront-nose" xlink:href="#shiro-nose" />
 		</g>
 
     <!-- Stationary full head from the top -->
@@ -316,7 +316,7 @@
 			<use xlink:href="#shiro-head-top" />
 			<use id="shiro-head-top-static-left-eye" xlink:href="#shiro-eye-top" x="-27" />
 			<use id="shiro-head-top-static-right-eye" xlink:href="#shiro-eye-top" x="27" />
-			<use id="shiro-head-top-static-front-nose" xlink:href="#shiro-nose-top" />
+			<use id="shiro-head-top-staticFront-nose" xlink:href="#shiro-nose-top" />
 			<use id="shiro-head-top-static-left-ear" xlink:href="#shiro-ear-top" x="-60" />
 			<use id="shiro-head-top-static-right-ear" xlink:href="#shiro-ear-top" x="60" />
 		</g>
@@ -327,7 +327,7 @@
 
     <!-- Arm -->
 		<ellipse id="shiro-arm" cx="0" cy="-160" rx="25" ry="50" fill="black" />
-		<ellipse id="shiro-arm-front" cx="0" cy="-155" rx="20" ry="50" fill="black" />
+		<ellipse id="shiro-armFront" cx="0" cy="-155" rx="20" ry="50" fill="black" />
 		<ellipse id="shiro-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
 
     <!-- Leg -->
@@ -346,9 +346,9 @@
 			<ellipse id="shiro-birthmark-side" cx="60" cy="-140" rx="20" ry="40" fill="none" stroke="black" stroke-width="3" />
 		</g>
 
-		<g id="shiro-torso-front">
+		<g id="shiro-torsoFront">
 			<use xlink:href="#shiro-body" />
-			<ellipse id="shiro-birthmark-front" cx="0" cy="-140" rx="35" ry="40" fill="none" stroke="black" stroke-width="3" />
+			<ellipse id="shiro-birthmarkFront" cx="0" cy="-140" rx="35" ry="40" fill="none" stroke="black" stroke-width="3" />
 		</g>
 
 		<g id="shiro-torso-top" clip-path="url(#shiro-body-top-clip)">
@@ -387,13 +387,13 @@
 					keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
 		</g>
 
-		<g id="shiro-front">
+		<g id="shiroFront">
 			<use id="shiro-leg-left" xlink:href="#shiro-leg" x="-40" />
 			<use id="shiro-leg-right" xlink:href="#shiro-leg" x="40" />
-			<use xlink:href="#shiro-torso-front" />
-			<use id="shiro-arm-left" xlink:href="#shiro-arm-front" x="-70" transform="rotate(20 -70 -210) " />
-			<use id="shiro-arm-right" xlink:href="#shiro-arm-front" x="70" transform="rotate(-20 70 -210) " />
-			<use xlink:href="#shiro-head-front-static" />
+			<use xlink:href="#shiro-torsoFront" />
+			<use id="shiro-arm-left" xlink:href="#shiro-armFront" x="-70" transform="rotate(20 -70 -210) " />
+			<use id="shiro-arm-right" xlink:href="#shiro-armFront" x="70" transform="rotate(-20 70 -210) " />
+			<use xlink:href="#shiro-headFront-static" />
 		</g>
 
 		<g id="shiro-top">
@@ -416,12 +416,12 @@
 
     <!-- Ear -->
 		<ellipse id="kuro-ear-side" cx="-15" cy="-305" rx="15" ry="25" fill="black" />
-		<ellipse id="kuro-ear-front" cx="0" cy="-305" rx="20" ry="25" fill="black" />
+		<ellipse id="kuro-earFront" cx="0" cy="-305" rx="20" ry="25" fill="black" />
 		<ellipse id="kuro-ear-top" cx="0" cy="-15" rx="20" ry="15" fill="black" />
 
     <!-- Eyes -->
 		<ellipse id="kuro-eye-side" cx="30" cy="-280" rx="15" ry="22" fill="black" />
-		<ellipse id="kuro-eye-front" cx="0" cy="-280" rx="17" ry="22" fill="black" />
+		<ellipse id="kuro-eyeFront" cx="0" cy="-280" rx="17" ry="22" fill="black" />
 		<ellipse id="kuro-eye-top" cx="0" cy="30" rx="17" ry="15" fill="black" />
 
     <!-- Nose -->
@@ -437,13 +437,13 @@
 		</g>
 
     <!-- Stationary full head facing front -->
-		<g id="kuro-head-front-static">
-			<use id="kuro-head-front-static-left-ear" xlink:href="#kuro-ear-front" x="-60" />
-			<use id="kuro-head-front-static-right-ear" xlink:href="#kuro-ear-front" x="60" />
+		<g id="kuro-headFront-static">
+			<use id="kuro-headFront-static-left-ear" xlink:href="#kuro-earFront" x="-60" />
+			<use id="kuro-headFront-static-right-ear" xlink:href="#kuro-earFront" x="60" />
 			<use xlink:href="#kuro-head" />
-			<use id="kuro-head-front-static-left-eye" xlink:href="#kuro-eye-front" x="-27" />
-			<use id="kuro-head-front-static-right-eye" xlink:href="#kuro-eye-front" x="27" />
-			<use id="kuro-head-front-static-front-nose" xlink:href="#kuro-nose" />
+			<use id="kuro-headFront-static-left-eye" xlink:href="#kuro-eyeFront" x="-27" />
+			<use id="kuro-headFront-static-right-eye" xlink:href="#kuro-eyeFront" x="27" />
+			<use id="kuro-headFront-staticFront-nose" xlink:href="#kuro-nose" />
 		</g>
 
     <!-- Stationary full head from the top -->
@@ -451,7 +451,7 @@
 			<use xlink:href="#kuro-head-top" />
 			<use id="kuro-head-top-static-left-eye" xlink:href="#kuro-eye-top" x="-27" />
 			<use id="kuro-head-top-static-right-eye" xlink:href="#kuro-eye-top" x="27" />
-			<use id="kuro-head-top-static-front-nose" xlink:href="#kuro-nose-top" />
+			<use id="kuro-head-top-staticFront-nose" xlink:href="#kuro-nose-top" />
 			<use id="kuro-head-top-static-left-ear" xlink:href="#kuro-ear-top" x="-60" />
 			<use id="kuro-head-top-static-right-ear" xlink:href="#kuro-ear-top" x="60" />
 		</g>
@@ -462,7 +462,7 @@
 
     <!-- Arm -->
 		<ellipse id="kuro-arm" cx="0" cy="-160" rx="25" ry="50" fill="black" />
-		<ellipse id="kuro-arm-front" cx="0" cy="-155" rx="20" ry="50" fill="black" />
+		<ellipse id="kuro-armFront" cx="0" cy="-155" rx="20" ry="50" fill="black" />
 		<ellipse id="kuro-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
 
     <!-- Leg -->
@@ -481,9 +481,9 @@
 			<ellipse id="kuro-birthmark-side" cx="60" cy="-140" rx="20" ry="40" fill="black" stroke="black" stroke-width="3" />
 		</g>
 
-		<g id="kuro-torso-front">
+		<g id="kuro-torsoFront">
 			<use xlink:href="#kuro-body" />
-			<ellipse id="kuro-birthmark-front" cx="0" cy="-140" rx="35" ry="40" fill="black" stroke="black" stroke-width="3" />
+			<ellipse id="kuro-birthmarkFront" cx="0" cy="-140" rx="35" ry="40" fill="black" stroke="black" stroke-width="3" />
 		</g>
 
 		<g id="kuro-torso-top" clip-path="url(#kuro-body-top-clip)">
@@ -522,13 +522,13 @@
 					keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
 		</g>
 
-		<g id="kuro-front">
+		<g id="kuroFront">
 			<use id="kuro-leg-left" xlink:href="#kuro-leg" x="-40" />
 			<use id="kuro-leg-right" xlink:href="#kuro-leg" x="40" />
-			<use xlink:href="#kuro-torso-front" />
-			<use id="kuro-arm-left" xlink:href="#kuro-arm-front" x="-70" transform="rotate(20 -70 -210) " />
-			<use id="kuro-arm-right" xlink:href="#kuro-arm-front" x="70" transform="rotate(-20 70 -210) " />
-			<use xlink:href="#kuro-head-front-static" />
+			<use xlink:href="#kuro-torsoFront" />
+			<use id="kuro-arm-left" xlink:href="#kuro-armFront" x="-70" transform="rotate(20 -70 -210) " />
+			<use id="kuro-arm-right" xlink:href="#kuro-armFront" x="70" transform="rotate(-20 70 -210) " />
+			<use xlink:href="#kuro-headFront-static" />
 		</g>
 
 		<g id="kuro-top">
@@ -551,12 +551,12 @@
 
     <!-- Ear -->
 		<ellipse id="flaquita-ear-side" cx="-15" cy="-375" rx="15" ry="30" fill="black" />
-		<ellipse id="flaquita-ear-front" cx="0" cy="-375" rx="20" ry="30" fill="black" />
+		<ellipse id="flaquita-earFront" cx="0" cy="-375" rx="20" ry="30" fill="black" />
 		<ellipse id="flaquita-ear-top" cx="0" cy="-15" rx="20" ry="15" fill="black" />
 
     <!-- Eyes -->
 		<ellipse id="flaquita-eye-side" cx="30" cy="-350" rx="8" ry="20" fill="black" />
-		<ellipse id="flaquita-eye-front" cx="0" cy="-350" rx="10" ry="20" fill="black" />
+		<ellipse id="flaquita-eyeFront" cx="0" cy="-350" rx="10" ry="20" fill="black" />
 		<ellipse id="flaquita-eye-top" cx="0" cy="30" rx="10" ry="8" fill="black" />
 
     <!-- Nose -->
@@ -572,13 +572,13 @@
 		</g>
 
     <!-- Stationary full head facing front -->
-		<g id="flaquita-head-front-static">
-			<use id="flaquita-head-front-static-left-ear" xlink:href="#flaquita-ear-front" transform="translate(-60,0)" />
-			<use id="flaquita-head-front-static-right-ear" xlink:href="#flaquita-ear-front" transform="translate(60,0)" />
+		<g id="flaquita-headFront-static">
+			<use id="flaquita-headFront-static-left-ear" xlink:href="#flaquita-earFront" transform="translate(-60,0)" />
+			<use id="flaquita-headFront-static-right-ear" xlink:href="#flaquita-earFront" transform="translate(60,0)" />
 			<use xlink:href="#flaquita-head" />
-			<use id="flaquita-head-front-static-left-eye" xlink:href="#flaquita-eye-front" transform="translate(-20,0)" />
-			<use id="flaquita-head-front-static-right-eye" xlink:href="#flaquita-eye-front" transform="translate(20,0)" />
-			<use id="flaquita-head-front-static-front-nose" xlink:href="#flaquita-nose" />
+			<use id="flaquita-headFront-static-left-eye" xlink:href="#flaquita-eyeFront" transform="translate(-20,0)" />
+			<use id="flaquita-headFront-static-right-eye" xlink:href="#flaquita-eyeFront" transform="translate(20,0)" />
+			<use id="flaquita-headFront-staticFront-nose" xlink:href="#flaquita-nose" />
 		</g>
 
     <!-- Stationary full head from the top -->
@@ -586,7 +586,7 @@
 			<use xlink:href="#flaquita-head-top" />
 			<use id="flaquita-left-eye" xlink:href="#flaquita-eye-top" transform="translate(-20)" />
 			<use id="flaquita-right-eye" xlink:href="#flaquita-eye-top" transform="translate(20)" />
-			<use id="flaquita-front-nose" xlink:href="#flaquita-nose-top" />
+			<use id="flaquitaFront-nose" xlink:href="#flaquita-nose-top" />
 			<use id="flaquita-left-ear" xlink:href="#flaquita-ear-top" transform="translate(-60)" />
 			<use id="flaquita-right-ear" xlink:href="#flaquita-ear-top" transform="translate(60)" />
 		</g>
@@ -597,7 +597,7 @@
 
     <!-- Arm -->
 		<ellipse id="flaquita-arm" cx="0" cy="-210" rx="25" ry="65" fill="black" />
-		<ellipse id="flaquita-arm-front" cx="0" cy="-210" rx="20" ry="65" fill="black" />
+		<ellipse id="flaquita-armFront" cx="0" cy="-210" rx="20" ry="65" fill="black" />
 		<ellipse id="flaquita-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
 
     <!-- Leg -->
@@ -636,13 +636,13 @@
 					keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
 		</g>
 
-		<g id="flaquita-front">
+		<g id="flaquitaFront">
 			<use xlink:href="#flaquita-leg" id="flaquita-leg-left" x="-35" />
 			<use xlink:href="#flaquita-leg" id="flaquita-leg-right" x="35" />
 			<use xlink:href="#flaquita-body" />
-			<use xlink:href="#flaquita-head-front-static" />
-			<use xlink:href="#flaquita-arm-front" id="flaquita-arm-left" x="-75" transform="rotate(15 -75 -235) " />
-			<use xlink:href="#flaquita-arm-front" id="flaquita-arm-right" x="75" transform="rotate(-15 75 -235) " />
+			<use xlink:href="#flaquita-headFront-static" />
+			<use xlink:href="#flaquita-armFront" id="flaquita-arm-left" x="-75" transform="rotate(15 -75 -235) " />
+			<use xlink:href="#flaquita-armFront" id="flaquita-arm-right" x="75" transform="rotate(-15 75 -235) " />
 		</g>
 
 		<g id="flaquita-top">
@@ -665,12 +665,12 @@
 
     <!-- Ear -->
 		<ellipse id="moopsie-ear-side" cx="-15" cy="-300" rx="20" ry="30" fill="black" />
-		<ellipse id="moopsie-ear-front" cx="0" cy="-300" rx="20" ry="30" fill="black" />
+		<ellipse id="moopsie-earFront" cx="0" cy="-300" rx="20" ry="30" fill="black" />
 		<ellipse id="moopsie-ear-top" cx="0" cy="-15" rx="25" ry="20" fill="black" />
 
     <!-- Eyes -->
 		<ellipse id="moopsie-eye-side" cx="35" cy="-300" rx="7" ry="20" fill="black" />
-		<ellipse id="moopsie-eye-front" cx="0" cy="-300" rx="12" ry="20" fill="black" />
+		<ellipse id="moopsie-eyeFront" cx="0" cy="-300" rx="12" ry="20" fill="black" />
 		<ellipse id="moopsie-eye-top" cx="0" cy="35" rx="12" ry="7" fill="black" />
 
     <!-- Nose -->
@@ -686,13 +686,13 @@
 		</g>
 
     <!-- Stationary full head facing front -->
-		<g id="moopsie-head-front-static">
-			<use id="moopsie-head-front-static-left-ear" xlink:href="#moopsie-ear-front" transform="translate(-85,0) rotate(40 0 -300) " />
-			<use id="moopsie-head-front-static-right-ear" xlink:href="#moopsie-ear-front" transform="translate(85,0) rotate(-40 0 -300) " />
+		<g id="moopsie-headFront-static">
+			<use id="moopsie-headFront-static-left-ear" xlink:href="#moopsie-earFront" transform="translate(-85,0) rotate(40 0 -300) " />
+			<use id="moopsie-headFront-static-right-ear" xlink:href="#moopsie-earFront" transform="translate(85,0) rotate(-40 0 -300) " />
 			<use xlink:href="#moopsie-head" />
-			<use id="moopsie-head-front-static-left-eye" xlink:href="#moopsie-eye-front" transform="translate(-30,0)" />
-			<use id="moopsie-head-front-static-right-eye" xlink:href="#moopsie-eye-front" transform="translate(30,0)" />
-			<use id="moopsie-head-front-static-nose" xlink:href="#moopsie-nose" transform="translate(-70,0)" />
+			<use id="moopsie-headFront-static-left-eye" xlink:href="#moopsie-eyeFront" transform="translate(-30,0)" />
+			<use id="moopsie-headFront-static-right-eye" xlink:href="#moopsie-eyeFront" transform="translate(30,0)" />
+			<use id="moopsie-headFront-static-nose" xlink:href="#moopsie-nose" transform="translate(-70,0)" />
 		</g>
 
     <!-- Stationary full head from the top -->
@@ -700,7 +700,7 @@
 			<use xlink:href="#moopsie-head-top" />
 			<use id="moopsie-left-eye" xlink:href="#moopsie-eye-top" transform="translate(-20)" />
 			<use id="moopsie-right-eye" xlink:href="#moopsie-eye-top" transform="translate(20)" />
-			<use id="moopsie-front-nose" xlink:href="#moopsie-nose-top" />
+			<use id="moopsieFront-nose" xlink:href="#moopsie-nose-top" />
 			<use id="moopsie-left-ear" xlink:href="#moopsie-ear-top" transform="translate(-85)" />
 			<use id="moopsie-right-ear" xlink:href="#moopsie-ear-top" transform="translate(85)" />
 		</g>
@@ -711,7 +711,7 @@
 
     <!-- Arm -->
 		<ellipse id="moopsie-arm" cx="0" cy="-165" rx="25" ry="50" fill="black" />
-		<ellipse id="moopsie-arm-front" cx="0" cy="-165" rx="22" ry="50" fill="black" />
+		<ellipse id="moopsie-armFront" cx="0" cy="-165" rx="22" ry="50" fill="black" />
 		<ellipse id="moopsie-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
 
     <!-- Leg -->
@@ -750,13 +750,13 @@
 					keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
 		</g>
 
-		<g id="moopsie-front">
+		<g id="moopsieFront">
 			<use xlink:href="#moopsie-leg" id="moopsie-leg-left" x="-30" />
 			<use xlink:href="#moopsie-leg" id="moopsie-leg-right" x="30" />
 			<use xlink:href="#moopsie-body" />
-			<use xlink:href="#moopsie-head-front-static" />
-			<use xlink:href="#moopsie-arm-front" id="moopsie-arm-left" x="-75" transform="rotate(15 -75 -225)" />
-			<use xlink:href="#moopsie-arm-front" id="moopsie-arm-right" x="75" transform="rotate(-15 75 -225) " />
+			<use xlink:href="#moopsie-headFront-static" />
+			<use xlink:href="#moopsie-armFront" id="moopsie-arm-left" x="-75" transform="rotate(15 -75 -225)" />
+			<use xlink:href="#moopsie-armFront" id="moopsie-arm-right" x="75" transform="rotate(-15 75 -225) " />
 		</g>
 
 		<g id="moopsie-top">
@@ -774,60 +774,62 @@
   <!-- **  FLOWER   ** -->
   <!-- *************** -->
     <!-- Basic flower petal -->
-		<ellipse id="petal-front" cx="24" cy="0" rx="20" ry="3" fill="red" stroke="black" stroke-width="1" />
-		<path id="petal-rear" d="M 24 0 c -35 -10 -35 10 0 0 z" fill="black" />
+		<!-- <ellipse id="petalFront" cx="24" cy="0" rx="20" ry="3" fill="red" stroke="black" stroke-width="1" />
+		<path id="petal-rear" d="M 24 0 c -35 -10 -35 10 0 0 z" fill="black" /> -->
+    <circle id="petalFront" cx="24" cy="0" r="20" fill="red" stroke="black" stroke-width="1" />
+    <path id="petalRear" d="M 24 0 c -35 -30 -35 30 0 0 z" fill="black" />
 
     <!-- One layer of petals -->
-		<g id="petallayer-front">
-			<use xlink:href="#petal-front" />
-			<use xlink:href="#petal-front" transform="rotate(90)" />
-			<use xlink:href="#petal-front" transform="rotate(180)" />
-			<use xlink:href="#petal-front" transform="rotate(270)" />
-		</g>
-		<g id="baselayer">
-			<use xlink:href="#petal-rear" />
-			<use xlink:href="#petal-rear" transform="rotate(90)" />
-			<use xlink:href="#petal-rear" transform="rotate(180)" />
-			<use xlink:href="#petal-rear" transform="rotate(270)" />
-		</g>
+    <g id="petalLayer">
+      <use xlink:href="#petalFront" />
+      <use xlink:href="#petalFront" transform="rotate(90)" />
+      <use xlink:href="#petalFront" transform="rotate(180)" />
+      <use xlink:href="#petalFront" transform="rotate(270)" />
+    </g>
+    <g id="baseLayer">
+      <use xlink:href="#petalRear" />
+      <use xlink:href="#petalRear" transform="rotate(90)" />
+      <use xlink:href="#petalRear" transform="rotate(180)" />
+      <use xlink:href="#petalRear" transform="rotate(270)" />
+    </g>
 
     <!-- Use layer to make flower -->
-		<g id="bloom-front">
-			<use xlink:href="#petallayer-front" />
-			<use xlink:href="#petallayer-front" transform="rotate(15)" />
-			<use xlink:href="#petallayer-front" transform="rotate(75)" />
-			<use xlink:href="#petallayer-front" transform="rotate(30)" />
-			<use xlink:href="#petallayer-front" transform="rotate(60)" />
-			<use xlink:href="#petallayer-front" transform="rotate(45)" />
-			<circle id="center" cx="0" cy="0" r="10" fill="black" />
-		</g>
-		<g id="flowerbase">
-			<use xlink:href="#baselayer" />
-			<use xlink:href="#baselayer" transform="rotate(15)" />
-			<use xlink:href="#baselayer" transform="rotate(75)" />
-			<use xlink:href="#baselayer" transform="rotate(30)" />
-			<use xlink:href="#baselayer" transform="rotate(60)" />
-			<use xlink:href="#baselayer" transform="rotate(45)" />
-		</g>
-		<g id="bloom-rear">
-			<use xlink:href="#petallayer-front" />
-			<use xlink:href="#petallayer-front" transform="rotate(15)" />
-			<use xlink:href="#petallayer-front" transform="rotate(75)" />
-			<use xlink:href="#petallayer-front" transform="rotate(30)" />
-			<use xlink:href="#petallayer-front" transform="rotate(60)" />
-			<use xlink:href="#petallayer-front" transform="rotate(45)" />
-			<use xlink:href="#flowerbase" />
-		</g>
+    <g id="bloomFront">
+      <use xlink:href="#petalLayer" />
+      <!-- <use xlink:href="#petallayer" transform="rotate(15)" />
+      <use xlink:href="#petallayer" transform="rotate(75)" />
+      <use xlink:href="#petallayer" transform="rotate(30)" />
+      <use xlink:href="#petallayer" transform="rotate(60)" /> -->
+      <use xlink:href="#petalLayer" transform="rotate(45)" />
+      <circle id="center" cx="0" cy="0" r="10" fill="black" />
+    </g>
+    <g id="flowerBase">
+      <use xlink:href="#baseLayer" />
+      <!-- <use xlink:href="#baselayer" transform="rotate(15)" />
+      <use xlink:href="#baselayer" transform="rotate(75)" />
+      <use xlink:href="#baselayer" transform="rotate(30)" />
+      <use xlink:href="#baselayer" transform="rotate(60)" /> -->
+      <use xlink:href="#baseLayer" transform="rotate(45)" />
+    </g>
+    <g id="bloomRear">
+      <use xlink:href="#bloomFront" />
+      <!-- <use xlink:href="#petallayer" transform="rotate(15)" />
+      <use xlink:href="#petallayer" transform="rotate(75)" />
+      <use xlink:href="#petallayer" transform="rotate(30)" />
+      <use xlink:href="#petallayer" transform="rotate(60)" />
+      <use xlink:href="#petallayer" transform="rotate(45)" /> -->
+      <use xlink:href="#flowerBase" />
+    </g>
 
     <!-- Flower and stem -->
 		<g id="flower">
 			<path id="stem" d="M 0 0 q 0 -45 -20 -60" stroke="black" stroke-width="3" fill="none" />
-			<use xlink:href="#bloom-front" transform="translate(-20 -60) rotate(-30) scale(1,0.2)" />
+			<use xlink:href="#bloomFront" transform="translate(-20 -60) rotate(-30) scale(1,0.2)" />
 		</g>
 
-		<g id="flower-front">
-			<path id="stem-front" d="M 0 0 q 0 -45 -5 -60" stroke="black" stroke-width="3" fill="none" />
-			<use xlink:href="#bloom-front" transform="translate(-5 -60)" />
+		<g id="flowerFront">
+			<path id="stemFront" d="M 0 0 q 0 -45 -5 -60" stroke="black" stroke-width="3" fill="none" />
+			<use xlink:href="#bloomFront" transform="translate(-5 -60)" />
 		</g>
 
     <!-- ******************************* FLOWER PATTERNS ******************************* -->
@@ -835,40 +837,40 @@
     <!--              Copy flower locations for 3, 4.                                    -->
     <!--              Change pattern y and width value to adjust for perspective.        -->
 		<pattern id="manyflowers-1" x="0" y="240" width="800" height="220" viewBox="0 0 800 220" patternUnits="userSpaceOnUse">
-			<use xlink:href="#flower-front" transform="translate(200,190) scale(0.9)" />
+			<use xlink:href="#flowerFront" transform="translate(200,190) scale(0.9)" />
 			<use xlink:href="#flower" transform="translate(75,200)" />
 			<use xlink:href="#flower" transform="translate(250,200) scale(-1, 1)" />
 			<use xlink:href="#flower" transform="translate(600,200) scale(-0.8, 0.8)" />
 			<use xlink:href="#flower" transform="translate(400,215)" />
 			<use xlink:href="#flower" transform="translate(350,220) scale(1.1)" />
-			<use xlink:href="#flower-front" transform="translate(500,220) scale(1.1)" />
+			<use xlink:href="#flowerFront" transform="translate(500,220) scale(1.1)" />
 		</pattern>
 		<pattern id="manyflowers-2" x="0" y="220" width="600" height="220" viewBox="0 0 800 220" patternUnits="userSpaceOnUse">
-			<use xlink:href="#flower-front" transform="translate(100,190) rotate(-5) scale(-0.8,1)" />
+			<use xlink:href="#flowerFront" transform="translate(100,190) rotate(-5) scale(-0.8,1)" />
 			<use xlink:href="#flower" transform="translate(30,200) scale(-1,1)" />
 			<use xlink:href="#flower" transform="translate(250,200)" />
 			<use xlink:href="#flower" transform="translate(700,200) scale(-1, 0.8)" />
 			<use xlink:href="#flower" transform="translate(620,215)" />
-			<use xlink:href="#flower-front" transform="translate(300,220) rotate(10) scale(-1.1,1)" />
-			<use xlink:href="#flower-front" transform="translate(500,220) scale(1.1)" />
+			<use xlink:href="#flowerFront" transform="translate(300,220) rotate(10) scale(-1.1,1)" />
+			<use xlink:href="#flowerFront" transform="translate(500,220) scale(1.1)" />
 		</pattern>
 		<pattern id="manyflowers-3" x="0" y="210" width="400" height="220" viewBox="0 -30 800 220" patternUnits="userSpaceOnUse">
-			<use xlink:href="#flower-front" transform="translate(200,190) scale(0.9)" />
+			<use xlink:href="#flowerFront" transform="translate(200,190) scale(0.9)" />
 			<use xlink:href="#flower" transform="translate(75,200)" />
 			<use xlink:href="#flower" transform="translate(250,200) scale(-1, 1)" />
 			<use xlink:href="#flower" transform="translate(600,200) scale(-0.8, 0.8)" />
 			<use xlink:href="#flower" transform="translate(400,215)" />
 			<use xlink:href="#flower" transform="translate(350,220) scale(1.1)" />
-			<use xlink:href="#flower-front" transform="translate(500,220) scale(1.1)" />
+			<use xlink:href="#flowerFront" transform="translate(500,220) scale(1.1)" />
 		</pattern>
 		<pattern id="manyflowers-4" x="0" y="200" width="200" height="220" viewBox="0 0 800 220" patternUnits="userSpaceOnUse">
-			<use xlink:href="#flower-front" transform="translate(100,190) rotate(-5) scale(-0.8,1)" />
+			<use xlink:href="#flowerFront" transform="translate(100,190) rotate(-5) scale(-0.8,1)" />
 			<use xlink:href="#flower" transform="translate(30,200) scale(-1,1)" />
 			<use xlink:href="#flower" transform="translate(250,200)" />
 			<use xlink:href="#flower" transform="translate(700,200) scale(-1, 0.8)" />
 			<use xlink:href="#flower" transform="translate(620,215)" />
-			<use xlink:href="#flower-front" transform="translate(300,220) rotate(10) scale(-1.1,1)" />
-			<use xlink:href="#flower-front" transform="translate(500,220) scale(1.1)" />
+			<use xlink:href="#flowerFront" transform="translate(300,220) rotate(10) scale(-1.1,1)" />
+			<use xlink:href="#flowerFront" transform="translate(500,220) scale(1.1)" />
 		</pattern>
 
     <!-- allflowers: Make 1 basic pattern of flowers to fill entire pattern.            -->
@@ -876,207 +878,207 @@
     <!--             Change pattern y and width value to adjust for perspective.        -->
 		<pattern id="allflowers-1" x="0" y="350" width="300" height="100" viewBox="0 0 300 100"
 				patternUnits="userSpaceOnUse" overflow="visible">
-			<use xlink:href="#bloom-front" transform="translate(40,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(260,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-rear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(280,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(-20,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-rear" transform="translate(200,45) "/>
-			<use xlink:href="#bloom-front" transform="translate(50,50) scale(0.8)" />
-			<use xlink:href="#bloom-front" transform="translate(120,55) "/>
-			<use xlink:href="#bloom-front" transform="translate(260,50) scale(0.7) "/>
-			<use xlink:href="#bloom-front" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
-			<use xlink:href="#bloom-front" transform="translate(240,80) scale(0.8,0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(0,80) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(300,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(40,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(260,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomRear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(280,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(-20,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomRear" transform="translate(200,45) "/>
+			<use xlink:href="#bloomFront" transform="translate(50,50) scale(0.8)" />
+			<use xlink:href="#bloomFront" transform="translate(120,55) "/>
+			<use xlink:href="#bloomFront" transform="translate(260,50) scale(0.7) "/>
+			<use xlink:href="#bloomFront" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
+			<use xlink:href="#bloomFront" transform="translate(240,80) scale(0.8,0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(0,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(300,80) scale(1, 0.4)" />
 		</pattern>
 		<pattern id="allflowers-1-moving" x="0" y="350" width="300" height="100" viewBox="0 0 300 100"
 				patternUnits="userSpaceOnUse" overflow="visible">
 			<animate attributeName="x" by="-116.26" dur="1s" repeatDur="indefinite" additive="sum" accumulate="sum" />
-			<use xlink:href="#bloom-front" transform="translate(40,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(260,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-rear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(280,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(-20,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-rear" transform="translate(200,45) "/>
-			<use xlink:href="#bloom-front" transform="translate(50,50) scale(0.8)" />
-			<use xlink:href="#bloom-front" transform="translate(120,55) "/>
-			<use xlink:href="#bloom-front" transform="translate(260,50) scale(0.7) "/>
-			<use xlink:href="#bloom-front" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
-			<use xlink:href="#bloom-front" transform="translate(240,80) scale(0.8,0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(0,80) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(300,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(40,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(260,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomRear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(280,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(-20,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomRear" transform="translate(200,45) "/>
+			<use xlink:href="#bloomFront" transform="translate(50,50) scale(0.8)" />
+			<use xlink:href="#bloomFront" transform="translate(120,55) "/>
+			<use xlink:href="#bloomFront" transform="translate(260,50) scale(0.7) "/>
+			<use xlink:href="#bloomFront" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
+			<use xlink:href="#bloomFront" transform="translate(240,80) scale(0.8,0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(0,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(300,80) scale(1, 0.4)" />
 		</pattern>
 		<pattern id="allflowers-2" x="0" y="285" width="200" height="100" viewBox="0 0 300 100"
 				patternUnits="userSpaceOnUse" overflow="visible">
-			<use xlink:href="#bloom-front" transform="translate(40,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(260,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-rear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(280,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(-20,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-rear" transform="translate(200,45) "/>
-			<use xlink:href="#bloom-front" transform="translate(50,50) scale(0.8)" />
-			<use xlink:href="#bloom-front" transform="translate(120,55) "/>
-			<use xlink:href="#bloom-front" transform="translate(260,50) scale(0.7) "/>
-			<use xlink:href="#bloom-front" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
-			<use xlink:href="#bloom-front" transform="translate(240,80) scale(0.8,0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(0,80) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(300,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(40,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(260,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomRear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(280,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(-20,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomRear" transform="translate(200,45) "/>
+			<use xlink:href="#bloomFront" transform="translate(50,50) scale(0.8)" />
+			<use xlink:href="#bloomFront" transform="translate(120,55) "/>
+			<use xlink:href="#bloomFront" transform="translate(260,50) scale(0.7) "/>
+			<use xlink:href="#bloomFront" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
+			<use xlink:href="#bloomFront" transform="translate(240,80) scale(0.8,0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(0,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(300,80) scale(1, 0.4)" />
 		</pattern>
 		<pattern id="allflowers-2-moving" x="0" y="285" width="200" height="100" viewBox="0 0 300 100"
 				patternUnits="userSpaceOnUse" overflow="visible">
 			<animate attributeName="x" by="-116.26" dur="1s" repeatDur="indefinite" additive="sum" accumulate="sum" />
-			<use xlink:href="#bloom-front" transform="translate(40,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(260,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-rear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(280,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(-20,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-rear" transform="translate(200,45) "/>
-			<use xlink:href="#bloom-front" transform="translate(50,50) scale(0.8)" />
-			<use xlink:href="#bloom-front" transform="translate(120,55) "/>
-			<use xlink:href="#bloom-front" transform="translate(260,50) scale(0.7) "/>
-			<use xlink:href="#bloom-front" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
-			<use xlink:href="#bloom-front" transform="translate(240,80) scale(0.8,0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(0,80) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(300,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(40,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(260,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomRear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(280,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(-20,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomRear" transform="translate(200,45) "/>
+			<use xlink:href="#bloomFront" transform="translate(50,50) scale(0.8)" />
+			<use xlink:href="#bloomFront" transform="translate(120,55) "/>
+			<use xlink:href="#bloomFront" transform="translate(260,50) scale(0.7) "/>
+			<use xlink:href="#bloomFront" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
+			<use xlink:href="#bloomFront" transform="translate(240,80) scale(0.8,0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(0,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(300,80) scale(1, 0.4)" />
 		</pattern>
 		<pattern id="allflowers-3" x="0" y="250" width="100" height="100" viewBox="0 0 300 100"
 				patternUnits="userSpaceOnUse" overflow="visible">
-			<use xlink:href="#bloom-front" transform="translate(40,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(260,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-rear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(280,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(-20,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-rear" transform="translate(200,45) "/>
-			<use xlink:href="#bloom-front" transform="translate(50,50) scale(0.8)" />
-			<use xlink:href="#bloom-front" transform="translate(120,55) "/>
-			<use xlink:href="#bloom-front" transform="translate(260,50) scale(0.7) "/>
-			<use xlink:href="#bloom-front" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
-			<use xlink:href="#bloom-front" transform="translate(240,80) scale(0.8,0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(0,80) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(300,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(40,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(260,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomRear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(280,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(-20,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomRear" transform="translate(200,45) "/>
+			<use xlink:href="#bloomFront" transform="translate(50,50) scale(0.8)" />
+			<use xlink:href="#bloomFront" transform="translate(120,55) "/>
+			<use xlink:href="#bloomFront" transform="translate(260,50) scale(0.7) "/>
+			<use xlink:href="#bloomFront" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
+			<use xlink:href="#bloomFront" transform="translate(240,80) scale(0.8,0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(0,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(300,80) scale(1, 0.4)" />
 		</pattern>
 		<pattern id="allflowers-3-moving" x="0" y="250" width="100" height="100" viewBox="0 0 300 100"
 				patternUnits="userSpaceOnUse" overflow="visible">
 			<animate attributeName="x" by="-116.26" dur="1s" repeatDur="indefinite" additive="sum" accumulate="sum" />
-			<use xlink:href="#bloom-front" transform="translate(40,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(260,18) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-rear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(280,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(-20,40) scale(1.1, 0.5)"/>
-			<use xlink:href="#bloom-rear" transform="translate(200,45) "/>
-			<use xlink:href="#bloom-front" transform="translate(50,50) scale(0.8)" />
-			<use xlink:href="#bloom-front" transform="translate(120,55) "/>
-			<use xlink:href="#bloom-front" transform="translate(260,50) scale(0.7) "/>
-			<use xlink:href="#bloom-front" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
-			<use xlink:href="#bloom-front" transform="translate(240,80) scale(0.8,0.5)"/>
-			<use xlink:href="#bloom-front" transform="translate(0,80) scale(1, 0.4)" />
-			<use xlink:href="#bloom-front" transform="translate(300,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(40,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(260,18) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(80,20) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomRear" transform="translate(120,25) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,20) rotate(-10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(280,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(-20,40) scale(1.1, 0.5)"/>
+			<use xlink:href="#bloomRear" transform="translate(200,45) "/>
+			<use xlink:href="#bloomFront" transform="translate(50,50) scale(0.8)" />
+			<use xlink:href="#bloomFront" transform="translate(120,55) "/>
+			<use xlink:href="#bloomFront" transform="translate(260,50) scale(0.7) "/>
+			<use xlink:href="#bloomFront" transform="translate(65,80) rotate(10) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(180,75) rotate(-10) scale(1, 0.5)" />
+			<use xlink:href="#bloomFront" transform="translate(240,80) scale(0.8,0.5)"/>
+			<use xlink:href="#bloomFront" transform="translate(0,80) scale(1, 0.4)" />
+			<use xlink:href="#bloomFront" transform="translate(300,80) scale(1, 0.4)" />
 		</pattern>
 		<pattern id="allflowers-top" x="0" y="0" width="400" height="400" viewBox="0 0 480 480"
 				patternUnits="userSpaceOnUse" overflow="visible">
 			<g id="topborder">
-				<use xlink:href="#bloom-front" transform="translate(0,0) " />
-				<use xlink:href="#bloom-front" transform="translate(60,5) scale(1.2) " />
-				<use xlink:href="#bloom-front" transform="translate(120,3) " />
-				<use xlink:href="#bloom-front" transform="translate(180,-15) " />
-				<use xlink:href="#bloom-front" transform="translate(240,10) " />
-				<use xlink:href="#bloom-front" transform="translate(300,2) scale(1.2) " />
-				<use xlink:href="#bloom-front" transform="translate(360,8) " />
-				<use xlink:href="#bloom-front" transform="translate(420,4) " />
-				<use xlink:href="#bloom-front" transform="translate(480,0) " />
+				<use xlink:href="#bloomFront" transform="translate(0,0) " />
+				<use xlink:href="#bloomFront" transform="translate(60,5) scale(1.2) " />
+				<use xlink:href="#bloomFront" transform="translate(120,3) " />
+				<use xlink:href="#bloomFront" transform="translate(180,-15) " />
+				<use xlink:href="#bloomFront" transform="translate(240,10) " />
+				<use xlink:href="#bloomFront" transform="translate(300,2) scale(1.2) " />
+				<use xlink:href="#bloomFront" transform="translate(360,8) " />
+				<use xlink:href="#bloomFront" transform="translate(420,4) " />
+				<use xlink:href="#bloomFront" transform="translate(480,0) " />
 			</g>
 
-			<use xlink:href="#bloom-front" transform="translate(8,64) " />
-			<use xlink:href="#bloom-front" transform="translate(364,66) " />
-			<use xlink:href="#bloom-front" transform="translate(488,64) " />
-			<use xlink:href="#bloom-front" transform="translate(65,60) " />
-			<use xlink:href="#bloom-front" transform="translate(177,62) " />
-			<use xlink:href="#bloom-front" transform="translate(315,70) " />
-			<use xlink:href="#bloom-front" transform="translate(423,60) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(242,57) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(115,55) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(8,64) " />
+			<use xlink:href="#bloomFront" transform="translate(364,66) " />
+			<use xlink:href="#bloomFront" transform="translate(488,64) " />
+			<use xlink:href="#bloomFront" transform="translate(65,60) " />
+			<use xlink:href="#bloomFront" transform="translate(177,62) " />
+			<use xlink:href="#bloomFront" transform="translate(315,70) " />
+			<use xlink:href="#bloomFront" transform="translate(423,60) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(242,57) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(115,55) scale(1.2) " />
 
-			<use xlink:href="#bloom-front" transform="translate(-11,120) " />
-			<use xlink:href="#bloom-front" transform="translate(233,122) " />
-			<use xlink:href="#bloom-front" transform="translate(122,128) " />
-			<use xlink:href="#bloom-front" transform="translate(469,120) " />
-			<use xlink:href="#bloom-front" transform="translate(287,120) " />
-			<use xlink:href="#bloom-front" transform="translate(180,118) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(422,113) " />
+			<use xlink:href="#bloomFront" transform="translate(-11,120) " />
+			<use xlink:href="#bloomFront" transform="translate(233,122) " />
+			<use xlink:href="#bloomFront" transform="translate(122,128) " />
+			<use xlink:href="#bloomFront" transform="translate(469,120) " />
+			<use xlink:href="#bloomFront" transform="translate(287,120) " />
+			<use xlink:href="#bloomFront" transform="translate(180,118) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(422,113) " />
 
-			<use xlink:href="#bloom-front" transform="translate(0,182) " />
-			<use xlink:href="#bloom-front" transform="translate(345,190) " />
-			<use xlink:href="#bloom-front" transform="translate(175,182) " />
-			<use xlink:href="#bloom-front" transform="translate(220,178) " />
-			<use xlink:href="#bloom-front" transform="translate(422,187) " />
-			<use xlink:href="#bloom-front" transform="translate(480,182) " />
+			<use xlink:href="#bloomFront" transform="translate(0,182) " />
+			<use xlink:href="#bloomFront" transform="translate(345,190) " />
+			<use xlink:href="#bloomFront" transform="translate(175,182) " />
+			<use xlink:href="#bloomFront" transform="translate(220,178) " />
+			<use xlink:href="#bloomFront" transform="translate(422,187) " />
+			<use xlink:href="#bloomFront" transform="translate(480,182) " />
 
-			<use xlink:href="#bloom-front" transform="translate(-10,240) " />
-			<use xlink:href="#bloom-front" transform="translate(470,240) " />
-			<use xlink:href="#bloom-front" transform="translate(172,234) " />
-			<use xlink:href="#bloom-front" transform="translate(58,248) " />
-			<use xlink:href="#bloom-front" transform="translate(127,230) " />
-			<use xlink:href="#bloom-front" transform="translate(249,242) " />
-			<use xlink:href="#bloom-front" transform="translate(304,240) " />
-			<use xlink:href="#bloom-front" transform="translate(431,250) " />
-			<use xlink:href="#bloom-front" transform="translate(345,245) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(-10,240) " />
+			<use xlink:href="#bloomFront" transform="translate(470,240) " />
+			<use xlink:href="#bloomFront" transform="translate(172,234) " />
+			<use xlink:href="#bloomFront" transform="translate(58,248) " />
+			<use xlink:href="#bloomFront" transform="translate(127,230) " />
+			<use xlink:href="#bloomFront" transform="translate(249,242) " />
+			<use xlink:href="#bloomFront" transform="translate(304,240) " />
+			<use xlink:href="#bloomFront" transform="translate(431,250) " />
+			<use xlink:href="#bloomFront" transform="translate(345,245) scale(1.2) " />
 
-			<use xlink:href="#bloom-front" transform="translate(63,315) " />
-			<use xlink:href="#bloom-front" transform="translate(192,304) " />
-			<use xlink:href="#bloom-front" transform="translate(234,292) " />
-			<use xlink:href="#bloom-front" transform="translate(313,322) " />
-			<use xlink:href="#bloom-front" transform="translate(357,290) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(120,300) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(414,285) " />
-			<use xlink:href="#bloom-front" transform="translate(5,305) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(485,305) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(63,315) " />
+			<use xlink:href="#bloomFront" transform="translate(192,304) " />
+			<use xlink:href="#bloomFront" transform="translate(234,292) " />
+			<use xlink:href="#bloomFront" transform="translate(313,322) " />
+			<use xlink:href="#bloomFront" transform="translate(357,290) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(120,300) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(414,285) " />
+			<use xlink:href="#bloomFront" transform="translate(5,305) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(485,305) scale(1.2) " />
 
-			<use xlink:href="#bloom-front" transform="translate(2,350) " />
-			<use xlink:href="#bloom-front" transform="translate(72,360) " />
-			<use xlink:href="#bloom-front" transform="translate(179,363) " />
-			<use xlink:href="#bloom-front" transform="translate(285,360) " />
-			<use xlink:href="#bloom-front" transform="translate(353,351) " />
-			<use xlink:href="#bloom-front" transform="translate(421,363) scale(1.2) " />
-			<use xlink:href="#bloom-front" transform="translate(482,350) " />
-			<use xlink:href="#bloom-front" transform="translate(251,355) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(2,350) " />
+			<use xlink:href="#bloomFront" transform="translate(72,360) " />
+			<use xlink:href="#bloomFront" transform="translate(179,363) " />
+			<use xlink:href="#bloomFront" transform="translate(285,360) " />
+			<use xlink:href="#bloomFront" transform="translate(353,351) " />
+			<use xlink:href="#bloomFront" transform="translate(421,363) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(482,350) " />
+			<use xlink:href="#bloomFront" transform="translate(251,355) scale(1.2) " />
 
-			<use xlink:href="#bloom-front" transform="translate(0,420) " />
-			<use xlink:href="#bloom-front" transform="translate(58,422) " />
-			<use xlink:href="#bloom-front" transform="translate(108,430) " />
-			<use xlink:href="#bloom-front" transform="translate(258,410) " />
-			<use xlink:href="#bloom-front" transform="translate(323,413) " />
-			<use xlink:href="#bloom-front" transform="translate(362,420) scale(1.1) " />
-			<use xlink:href="#bloom-front" transform="translate(434,409) " />
-			<use xlink:href="#bloom-front" transform="translate(480,420) " />
-			<use xlink:href="#bloom-front" transform="translate(193,434) scale(1.2) " />
+			<use xlink:href="#bloomFront" transform="translate(0,420) " />
+			<use xlink:href="#bloomFront" transform="translate(58,422) " />
+			<use xlink:href="#bloomFront" transform="translate(108,430) " />
+			<use xlink:href="#bloomFront" transform="translate(258,410) " />
+			<use xlink:href="#bloomFront" transform="translate(323,413) " />
+			<use xlink:href="#bloomFront" transform="translate(362,420) scale(1.1) " />
+			<use xlink:href="#bloomFront" transform="translate(434,409) " />
+			<use xlink:href="#bloomFront" transform="translate(480,420) " />
+			<use xlink:href="#bloomFront" transform="translate(193,434) scale(1.2) " />
 
 			<use id="bottomborder" xlink:href="#topborder" transform="translate(0,480) "/>
 
-			<use xlink:href="#bloom-front" transform="translate(303,180) scale(1.4) " />
-			<use xlink:href="#bloom-front" transform="translate(62,135) scale(1.4) " />
-			<use xlink:href="#bloom-front" transform="translate(354,115) scale(1.4) " />
-			<use xlink:href="#bloom-front" transform="translate(135,372) scale(1.4) " />
-			<use xlink:href="#bloom-front" transform="translate(70,173) scale(1.4) " />
-			<use xlink:href="#bloom-front" transform="translate(110,180) scale(1.4) " />
+			<use xlink:href="#bloomFront" transform="translate(303,180) scale(1.4) " />
+			<use xlink:href="#bloomFront" transform="translate(62,135) scale(1.4) " />
+			<use xlink:href="#bloomFront" transform="translate(354,115) scale(1.4) " />
+			<use xlink:href="#bloomFront" transform="translate(135,372) scale(1.4) " />
+			<use xlink:href="#bloomFront" transform="translate(70,173) scale(1.4) " />
+			<use xlink:href="#bloomFront" transform="translate(110,180) scale(1.4) " />
 
 		</pattern>
 
@@ -1234,7 +1236,7 @@
 		<g id="flowerbutton">
 		  <text fill="black" font-family="Arial, Sans Serif" font-size="14pt" text-anchor="middle" x="0" y="-60">play</text>
 			<use xlink:href="#buttonbackground"/>
-			<use xlink:href="#bloom-front" />
+			<use xlink:href="#bloomFront" />
 		</g>
 
 		<g id="creditlines">
@@ -1303,7 +1305,7 @@
 			<set id="s1c2Display" attributeName="display" to="inline" begin="s1c1Display.end" dur="10s" />
 			<g id="s1c2Illustration">
 				<use xlink:href="#bamboostalk2" transform="translate(200,500) rotate(3)" />
-				<use xlink:href="#panda-front" transform="translate(100,600) scale(1)">
+				<use xlink:href="#pandaFront" transform="translate(100,600) scale(1)">
 					<animate id="s1c2Pandawalks" attributeName="y" calcMode="spline" additive="sum"
 							values="0;-10.25;0" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
 							begin="s1c2Display.begin" dur="1s" repeatDur="4s" fill="freeze" />
@@ -1311,7 +1313,7 @@
 							values="1;1.5" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
 							begin="s1c2Display.begin" dur="4s" fill="freeze" />
 				</use>
-				<use xlink:href="#bloom-rear" transform="translate(500,425) scale(3)" />
+				<use xlink:href="#bloomRear" transform="translate(500,425) scale(3)" />
 				<g id="thoughtbubbles">
 					<circle cx="280" cy="125" r="30" fill="white" stroke="black" opacity="0" display="none">
 						<animate id="s1c2Showbubble1" attributeName="opacity" from="0" to="1" dur="0.5s"
@@ -1326,8 +1328,8 @@
 					<g opacity="0" display="none">
 						<circle cx="615" cy="165" r="110" fill="white" stroke="black" />
 						<svg x="500" y="100" width="200" height="150" viewBox="0 0 250 250">
-							<use xlink:href="#head-front-static" x="150" y="450" />
-							<use xlink:href="#bloom-front" x="110" y="60" />
+							<use xlink:href="#headFront-static" x="150" y="450" />
+							<use xlink:href="#bloomFront" x="110" y="60" />
 						</svg>
 						<animate id="s1c2Showbubble3" attributeName="opacity" from="0" to="1" dur="0.5s"
 								begin="s1c2Showbubble2.begin+0.4s" fill="freeze" />
@@ -1353,7 +1355,7 @@
 					<use xlink:href="#leg" x="-40" />
 					<use xlink:href="#leg" x="40" />
 					<use xlink:href="#body" />
-					<use xlink:href="#head-front-static">
+					<use xlink:href="#headFront-static">
 						<animateTransform attributeName="transform" type="scale" additive="sum" calcMode="spline"
 								values="1;1.2" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
 								begin="s1c3MovePanda.begin" dur="5s" />
@@ -1361,8 +1363,8 @@
 								values="0,0;0,70" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
 								begin="s1c3MovePanda.begin" dur="5s" />
 					</use>
-					<use xlink:href="#arm-front" id="s1c3PandaFrontArmLeft" x="-90" transform="rotate(15 -90 -245)" />
-					<use xlink:href="#arm-front" id="s1c3PandaFrontArmRight" x="90" transform="rotate(-15 90 -245)">
+					<use xlink:href="#armFront" id="s1c3PandaFrontArmLeft" x="-90" transform="rotate(15 -90 -245)" />
+					<use xlink:href="#armFront" id="s1c3PandaFrontArmRight" x="90" transform="rotate(-15 90 -245)">
 						<animateTransform attributeName="transform" type="rotate" additive="replace" calcMode="spline"
 								values="-15 90 -245;0 45 -235" keyTimes="&EaseInTimes;" keySplines="&EaseInSplines;"
 								begin="s1c3MovePanda.begin" dur="5s" />
@@ -1377,7 +1379,7 @@
 							values="0,0;100,0" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
 							begin="s1c3Display.begin" dur="1s" additive="sum" fill="freeze" />
 				</g>
-				<use xlink:href="#bloom-rear" transform="translate(500,425) scale(3)">
+				<use xlink:href="#bloomRear" transform="translate(500,425) scale(3)">
 					<animateTransform id="s1c3MoveFlower" attributeName="transform" type="translate" calcMode="spline"
 							values="0,0;-100,0" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
 							begin="s1c3Display.begin" dur="1s" additive="sum" fill="freeze" />
@@ -1393,7 +1395,7 @@
 			<svg id="s1c4Illustration">
 				<g id="s1c4Flower" transform="translate(500,400) scale(3)">
 					<use xlink:href="#stem" transform="translate(0 20) scale(1 1.25)" />
-					<use xlink:href="#bloom-front" transform="translate(-20 -60)" />
+					<use xlink:href="#bloomFront" transform="translate(-20 -60)" />
 				</g>
 				<animate attributeName="viewBox" values="0 0 800 450;80 20 704 396" calcMode="spline"
 						dur="5s" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
@@ -1476,66 +1478,66 @@
 				<animate attributeName="viewBox" values="0 0 800 450;0 -1100 2400 1350" calcMode="spline"
 						keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;" dur="1.5s" begin="s2c2Display.begin" />
 				<use xlink:href="#bamboostalk2" transform="translate(200,500) rotate(3)" />
-				<use xlink:href="#panda-front" transform="translate(100,600) scale(1.5)" />
+				<use xlink:href="#pandaFront" transform="translate(100,600) scale(1.5)" />
 				<g id="s2c2Thoughtbubbles">
 					<circle cx="280" cy="125" r="30" fill="white" stroke="black" display="none">
-						<animate id="scene2-bubble1Display" attributeName="opacity" fill="freeze"
+						<animate id="s2c2Bubble1Display" attributeName="opacity" fill="freeze"
 								from="0" to="1" dur="0.5s" begin="s2c2Display.begin" />
-						<set attributeName="display" to="inline" begin="scene2-bubble1Display.begin" end="s2c2Display.end" />
+						<set attributeName="display" to="inline" begin="s2c2Bubble1Display.begin" end="s2c2Display.end" />
 					</circle>
 					<circle cx="405" cy="90" r="50" fill="white" stroke="black" display="none">
-						<animate id="scene2-bubble2Display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-bubble1Display.end" />
-						<set attributeName="display" to="inline" begin="scene2-bubble2Display.begin" end="s2c2Display.end" />
+						<animate id="s2c2Bubble2Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="s2c2Bubble1Display.end" />
+						<set attributeName="display" to="inline" begin="s2c2Bubble2Display.begin" end="s2c2Display.end" />
 					</circle>
 				</g>
 				<g id="screens">
 					<g id="top-right-frame" opacity="0" display="none">
-						<animate id="scene2-frame4Display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-frame3Display.end+1s" />
-						<set attributeName="display" to="inline" begin="scene2-frame4Display.begin" end="s2c2Display.end" />
+						<animate id="s2c2Frame4Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="s2c2Frame3Display.end+1s" />
+						<set attributeName="display" to="inline" begin="s2c2Frame4Display.begin" end="s2c2Display.end" />
 						<rect id="top-right-border" x="1254" y="-1075" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="top-right-screen" x="1254" y="-1075" width="896" height="504" viewBox="-20 80 512 288">
 							<g id="frame4-panda" transform="translate(150,500)">
 								<use xlink:href="#body" />
-								<use xlink:href="#panda-front-arm-left" />
-								<use xlink:href="#panda-front-arm-right" transform="rotate(-70 90 -245)">
+								<use xlink:href="#pandaFront-arm-left" />
+								<use xlink:href="#pandaFront-arm-right" transform="rotate(-70 90 -245)">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="0 90 -245;-70 90 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame4Display.begin" dur="1s" fill="freeze" />
+											begin="s2c2Frame4Display.begin" dur="1s" fill="freeze" />
 								</use>
-								<use xlink:href="#head-front-static" transform="rotate(20 0 -245)">
+								<use xlink:href="#headFront-static" transform="rotate(20 0 -245)">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="0 0 -245;20 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame4Display.begin" dur="1.5s" fill="freeze" />
+											begin="s2c2Frame4Display.begin" dur="1.5s" fill="freeze" />
 								</use>
 								<animateTransform attributeName="transform" type="translate" calcMode="spline" additive="sum"
 										values="-50 0;-25 -10;0 0" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
-										begin="scene2-frame4Display.begin" dur="0.8s" fill="freeze" />
+										begin="s2c2Frame4Display.begin" dur="0.8s" fill="freeze" />
 							</g>
 							<g id="frame4-moopsie" transform="translate(330,500)">
 								<use xlink:href="#moopsie-body" />
-								<use xlink:href="#moopsie-head-front-static" transform="rotate(-15 0 -225)">
+								<use xlink:href="#moopsie-headFront-static" transform="rotate(-15 0 -225)">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="0 0 -225;-15 0 -225" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame4Display.begin" dur="0.5s" fill="freeze" />
+											begin="s2c2Frame4Display.begin" dur="0.5s" fill="freeze" />
 								</use>
-								<use xlink:href="#bloom-front" transform="translate(0,-130)" />
-								<use xlink:href="#moopsie-arm-front" transform="translate(-75) rotate(-20 0 -225)" />
-								<use xlink:href="#moopsie-arm-front" transform="translate(75) rotate(20 0 -225)" />
+								<use xlink:href="#bloomFront" transform="translate(0,-130)" />
+								<use xlink:href="#moopsie-armFront" transform="translate(-75) rotate(-20 0 -225)" />
+								<use xlink:href="#moopsie-armFront" transform="translate(75) rotate(20 0 -225)" />
 							</g>
 						</svg>
 					</g>
 					<g id="bottom-right-frame" opacity="0" display="none">
-						<animate id="scene2-frame3Display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-frame2Display.end+1s" />
-						<set attributeName="display" to="inline" begin="scene2-frame3Display.begin" end="s2c2Display.end" />
+						<animate id="s2c2Frame3Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="s2c2Frame2Display.end+1s" />
+						<set attributeName="display" to="inline" begin="s2c2Frame3Display.begin" end="s2c2Display.end" />
 						<rect id="bottom-right-border" x="1254" y="-500" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="bottom-right-screen" x="1254" y="-500" width="896" height="504" viewBox="20 80 512 288">
 							<g id="frame3-shiro" transform="translate(400,500)">
 								<use xlink:href="#shiro-body" />
-								<use xlink:href="#shiro-birthmark-front" />
-								<use xlink:href="#shiro-head-front-static" />
+								<use xlink:href="#shiro-birthmarkFront" />
+								<use xlink:href="#shiro-headFront-static" />
 								<use xlink:href="#shiro-arm-left">
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace" values="0 -70 -210;20 -70 -210" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" begin="s2c2Frame3Panda.end" dur="0.5s" fill="remove" id="s2c2ShiroLeftArmMove"/>
 									<animateTransform attributeName="transform" additive="replace" begin="s2c2ShiroLeftArmMove.end" end="s2c2Display.end" fill="remove" from="20 -70 -210" id="s2c2ShiroLeftArmStick" to="20 -70 -210" type="rotate"/>
@@ -1551,22 +1553,22 @@
 								<use xlink:href="#body" />
 								<use xlink:href="#head-right-static" />
 								<g id="frame3-flowerarm">
-									<use xlink:href="#bloom-front" transform="translate(20,-110)" />
+									<use xlink:href="#bloomFront" transform="translate(20,-110)" />
 									<use xlink:href="#arm" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 											values="-80 0 -245;-110 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-											begin="scene2-frame3Display.begin" dur="1s" fill="freeze" />
+											begin="s2c2Frame3Display.begin" dur="1s" fill="freeze" />
 								</g>
 								<animateTransform id="s2c2Frame3Panda" attributeName="transform" type="translate" calcMode="spline"
 										values="-50 0;-25 -10;0 0" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
-										begin="scene2-frame3Display.begin" dur="0.5s" fill="freeze" additive="sum"/>
+										begin="s2c2Frame3Display.begin" dur="0.5s" fill="freeze" additive="sum"/>
 							</g>
 						</svg>
 					</g>
 					<g id="top-left-frame" opacity="0" display="none">
-						<animate id="scene2-frame2Display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-frame1Display.end+1s" />
-						<set attributeName="display" to="inline" begin="scene2-frame2Display.begin" end="s2c2Display.end" />
+						<animate id="s2c2Frame2Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="s2c2Frame1Display.end+1s" />
+						<set attributeName="display" to="inline" begin="s2c2Frame2Display.begin" end="s2c2Display.end" />
 						<rect id="top-left-border" x="250" y="-1075" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="top-left-screen" x="250" y="-1075" width="896" height="504" viewBox="20 60 512 288">
 							<g id="frame2-flaquita" transform="translate(400,500) scale(-1,1) ">
@@ -1578,21 +1580,21 @@
 										values="0 0 -245;-90 0 -245;0 0 -245"
 										keyTimes="&EaseOutTimes;;&EaseInOutTimes;"
 										keySplines="&EaseOutSplines;;&EaseInOutSplines;"
-										begin="scene2-frame2Display.begin" dur="1s" fill="freeze" />
+										begin="s2c2Frame2Display.begin" dur="1s" fill="freeze" />
 							</use>
 							<g id="frame2-flower">
-								<use xlink:href="#bloom-front" transform="translate(160,380) scale(0.4,1)" />
-								<animateTransform id="panda-gives-flower" attributeName="transform" type="rotate" calcMode="spline" additive="replace"
+								<use xlink:href="#bloomFront" transform="translate(160,380) scale(0.4,1)" />
+								<animateTransform id="pandaGivesFlower" attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 										values="0 150 255;-90 150 255" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;"
-										begin="scene2-frame2Display.begin" dur="0.5s" fill="freeze" />
+										begin="s2c2Frame2Display.begin" dur="0.5s" fill="freeze" />
 								<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 										values="0 170 505;90 170 505" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-										begin="panda-gives-flower.end" dur="1s" fill="freeze" />
+										begin="pandaGivesFlower.end" dur="1s" fill="freeze" />
 							</g>
 							<use id="frame2-flaquita-arm" xlink:href="#flaquita-arm" transform="translate(400,500) scale(-1,1)">
 								<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 										values="0 0 -265;-90 0 -265;-180 0 -265" keyTimes="0;0.33;1" keySplines="&CycleSplines;"
-										begin="scene2-frame2Display.begin" dur="1.5s" fill="freeze" />
+										begin="s2c2Frame2Display.begin" dur="1.5s" fill="freeze" />
 							</use>
 							<g id="frame2-panda" transform="translate(150,500)">
 								<use xlink:href="#body" />
@@ -1602,19 +1604,19 @@
 						</svg>
 					</g>
 					<g id="bottom-left-frame" opacity="0" display="none">
-						<animate id="scene2-frame1Display" attributeName="opacity" fill="freeze"
-								from="0" to="1" dur="0.5s" begin="scene2-bubble2Display.end" />
-						<set attributeName="display" to="inline" begin="scene2-frame1Display.begin" end="s2c2Display.end" />
+						<animate id="s2c2Frame1Display" attributeName="opacity" fill="freeze"
+								from="0" to="1" dur="0.5s" begin="s2c2Bubble2Display.end" />
+						<set attributeName="display" to="inline" begin="s2c2Frame1Display.begin" end="s2c2Display.end" />
 						<rect id="bottom-left-border" x="250" y="-500" width="896" height="504" fill="white" stroke="black" stroke-width="2" />
 						<svg id="bottom-left-screen" x="250" y="-500" width="896" height="504" viewBox="50 80 512 288">
 							<g id="frame1-kuro" transform="translate(400,500)">
 								<use xlink:href="#kuro-body" />
-								<use xlink:href="#kuro-birthmark-front" />
-								<use xlink:href="#kuro-head-front-static" />
+								<use xlink:href="#kuro-birthmarkFront" />
+								<use xlink:href="#kuro-headFront-static" />
 								<use xlink:href="#kuro-arm-left">
 									<animateTransform id="kuro-raises-left-arm" attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 -70 -210;140 -70 -210" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-											begin="scene2-frame1Display.begin" dur="1s" fill="freeze" />
+											begin="s2c2Frame1Display.begin" dur="1s" fill="freeze" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 -70 -210;-20 -70 -210;0 -70 -210" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
 											begin="kuro-raises-left-arm.end" dur="0.5s" repeatDur="4s" fill="freeze" />
@@ -1622,23 +1624,23 @@
 								<use xlink:href="#kuro-arm-right">
 									<animateTransform id="kuro-raises-right-arm" attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 70 -210;-140 70 -210" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-											begin="scene2-frame1Display.begin" dur="1s" fill="freeze" />
+											begin="s2c2Frame1Display.begin" dur="1s" fill="freeze" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 70 -210;20 70 -210;0 70 -210" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
 											begin="kuro-raises-right-arm.end" dur="0.5s" repeatDur="4s" fill="freeze" />
 								</use>
 								<animateTransform attributeName="transform" type="translate" additive="sum" values="0 0;0 10;0 0"
-										begin="scene2-frame1Display.begin" dur="0.3s" repeatDur="5s" fill="freeze" />
+										begin="s2c2Frame1Display.begin" dur="0.3s" repeatDur="5s" fill="freeze" />
 							</g>
 							<g id="frame1-panda" transform="translate(150,500)">
 								<use xlink:href="#body" />
 								<use xlink:href="#head-right-static" />
 								<g id="frame1-flowerarm">
-									<use xlink:href="#bloom-front" transform="translate(0,-100)" />
+									<use xlink:href="#bloomFront" transform="translate(0,-100)" />
 									<use xlink:href="#arm" />
 									<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
 											values="0 0 -245;-100 0 -245" keyTimes="&EaseInOutTimes;" keySplines="&EaseInOutSplines;"
-											begin="scene2-frame1Display.begin" dur="1s" fill="freeze" />
+											begin="s2c2Frame1Display.begin" dur="1s" fill="freeze" />
 								</g>
 							</g>
 						</svg>
@@ -1659,7 +1661,7 @@
 						begin="s2c3Display.begin" fill="freeze" />
 				<g id="s2c3Flower" transform="translate(500,400) scale(3)">
 					<use xlink:href="#stem" transform="translate(0 20) scale(1 1.25)" />
-					<use xlink:href="#bloom-front" transform="translate(-20 -60)" />
+					<use xlink:href="#bloomFront" transform="translate(-20 -60)" />
 				</g>
 			</svg>
 			<text id="s2c3Caption" class="caption" filter="url(#textbackground)">
@@ -1747,7 +1749,7 @@
 				<rect id="s3c2BackgroundManyflowers-mid" x="0" y="200" width="1200" height="220" fill="url(#manyflowers-3)" />
 				<g id="s3c2Flower" transform="translate(800,380)">
 					<use xlink:href="#stem" transform="translate(0 20) scale(1 1.25)" />
-					<use xlink:href="#bloom-front" transform="translate(-20 -60)" />
+					<use xlink:href="#bloomFront" transform="translate(-20 -60)" />
 				</g>
 				<use xlink:href="#panda-rear" x="580" y="420" />
 				<rect id="s3c2ForegroundManyflowers" x="0" y="240" width="1200" height="220" fill="url(#manyflowers-1)" />
@@ -1775,13 +1777,13 @@
 				<g id="s3c3PandaThinks" transform="translate(150,420)">
 					<use xlink:href="#leg" x="-40" />
 					<use xlink:href="#leg" x="40" />
-					<use xlink:href="#torso-front" />
-					<use xlink:href="#head-front-static" transform="rotate(10 0 -245)">
+					<use xlink:href="#torsoFront" />
+					<use xlink:href="#headFront-static" transform="rotate(10 0 -245)">
 						<animateTransform id="s3c3PandaHeadEureka" attributeName="transform" type="rotate" calcMode="spline" values="0 0 -245;-10 0 -245" keyTimes="&EaseOutTimes;" keySplines="&EaseOutSplines;" dur="0.3s" begin="s3c3PandaArmTap.end" additive="sum" fill="remove" />
 						<animateTransform attributeName="transform" additive="replace" begin="s3c3PandaHeadEureka.end" dur="2s" end="s3c3Display.end" fill="remove" from="0 0 -245" id="s3c3PandaHeadEurekaStick" to="0 0 -245" type="rotate"/>
 					</use>
-					<use xlink:href="#arm-front" id="s3c3ArmLeft" x="-90" transform="rotate(15 -90 -245)" />
-					<use xlink:href="#arm-front" id="s3c3ArmRight" x="90" transform="rotate(185 90 -245)">
+					<use xlink:href="#armFront" id="s3c3ArmLeft" x="-90" transform="rotate(15 -90 -245)" />
+					<use xlink:href="#armFront" id="s3c3ArmRight" x="90" transform="rotate(185 90 -245)">
 						<animateTransform id="s3c3PandaArmTap" attributeName="transform" type="rotate" calcMode="spline" additive="replace"
 								values="175 90 -245;185 90 -245;175 90 -245" keyTimes="&CycleTimes;" keySplines="&CycleSplines;"
 								dur="0.5s" begin="s3c3Display.begin" repeatDur="4.5s" fill="remove" />
@@ -1889,8 +1891,8 @@
 				<rect id="s4c3BackgroundManyflowersMid" x="0" y="285" width="800" height="220" fill="url(#allflowers-2)" />
 				<g id="s4c3Pandas" transform="translate(0,480)">
 					<g id="s4c3PandaFront" transform="translate(500)">
-						<use xlink:href="#torso-front" />
-						<use xlink:href="#head-front-static" transform="rotate(10 0 -245)">
+						<use xlink:href="#torsoFront" />
+						<use xlink:href="#headFront-static" transform="rotate(10 0 -245)">
 							<animateTransform attributeName="transform" type="rotate" additive="sum"
 									values="0 0 -245;5 0 -245;0 0 -245"
 									begin="s4c3Display.begin" dur="0.5s" repeatDur="indefinite" />
@@ -1898,10 +1900,10 @@
 									values="0 0;0 -3;0 0"
 									begin="s4c3Display.begin" dur="0.3s" repeatDur="indefinite" />
 						</use>
-						<use xlink:href="#arm-front" x="-90" transform="rotate(15 -90 -245)" />
+						<use xlink:href="#armFront" x="-90" transform="rotate(15 -90 -245)" />
 						<g id="panda-munchie-arm" transform="translate(90) rotate(40 0 -245)">
 							<use xlink:href="#bamboo-munchie" transform="rotate(130 0 -130)" />
-							<use xlink:href="#arm-front"/>
+							<use xlink:href="#armFront"/>
 							<animateTransform attributeName="transform" type="rotate" additive="sum"
 									values="0 0 -245;5 0 -245;0 0 -245"
 									begin="s4c3Display.begin" dur="0.5s" repeatDur="indefinite" />
@@ -1984,7 +1986,7 @@
 			</text>
 			<text id="s4c3Caption2" class="caption" filter="url(#textbackground)" display="none">
       <tspan x="270" y="80">And it was a very nice day.</tspan>
-				<set id="s4c3Caption2Display" attributeName="display" to="inline" begin="s4c3-caption1Display.end" dur="9s" />
+				<set id="s4c3Caption2Display" attributeName="display" to="inline" begin="s4c3Caption1Display.end" dur="9s" />
 			</text>
 		</g>
 
