@@ -1580,10 +1580,10 @@
 							</g>
 							<use id="frame2-panda-arm" xlink:href="#arm" transform="translate(150,500)">
 								<animateTransform attributeName="transform" type="rotate" calcMode="spline" additive="sum"
-										values="0 0 -245;-90 0 -245;0 0 -245"
-										keyTimes="&EaseOutTimes;;&EaseInOutTimes;"
-										keySplines="&EaseOutSplines;;&EaseInOutSplines;"
-										begin="s2c2Frame2Display.begin" dur="1s" fill="freeze" />
+										values="0 0 -245;-90 0 -245"
+										keyTimes="&EaseOutTimes;"
+										keySplines="&EaseOutSplines;"
+										begin="s2c2Frame2Display.begin" dur="0.5s" fill="freeze" />
 							</use>
 							<g id="frame2-flower">
 								<use xlink:href="#bloomFront" transform="translate(160,380) scale(0.4,1)" />
