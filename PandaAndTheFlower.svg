@@ -24,7 +24,7 @@
 <!-- *************************************************************************** -->
 
 <svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
-	<script type="text/ecmascript" xlink:href="CreditDictionary.js" />
+	<!-- <script type="text/ecmascript" xlink:href="CreditDictionary.js" />
 	<script type="text/ecmascript" xlink:href="Credit.js" />
 	<script type="text/ecmascript" xlink:href="CreditRoll.js" />
 	<script type="text/ecmascript" xlink:href="DCDictionary.js"/>
@@ -76,13 +76,13 @@
 			fill: black;
 		}
 
-	]]></style>
+	]]></style> -->
 	<metadata>
 		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 				xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 				xmlns:dc="http://purl.org/dc/elements/1.1/"
-				xmlns:cc="http://web.resource.org/cc/">
-			<cc:Work rdf:about="http://home.earthlink.net/~svgscribbles/panda/pandaandtheflower/PandaAndTheFlower.svg">
+				xmlns:cc="http://creativecommons.org/ns#">
+			<cc:Work rdf:about="PandaAndTheFlower.svg">
 				<dc:title>Panda and the Flower</dc:title>
 				<dc:description>Panda takes a walk in the forest and learns the value of patience.</dc:description>
 				<dc:date>2005-02-06</dc:date>
@@ -101,19 +101,22 @@
 					</cc:Agent>
 				</dc:contributor>
 -->
-				<dc:source>http://home.earthlink.net/~svgscribbles/panda/pandaandtheflower/PandaAndTheFlower.svg</dc:source>
+				<dc:source></dc:source>
 				<dc:rights rdf:nodeID="GarzaPeter"/>
-				<cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/"/>
+				<cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 			</cc:Work>
 
-			<cc:License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/">
-				<cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
-				<cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
-				<cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
-				<cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
-				<cc:prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
-				<cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
-				<cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+
+
+
+			<cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+				<cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+				<cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+				<cc:requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+				<cc:requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+				<cc:prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+				<cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+				<cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
 			</cc:License>
 		</rdf:RDF>
 	</metadata>
