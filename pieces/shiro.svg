@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+  <!-- *************** -->
+  <!-- **   SHIRO   ** -->
+  <!-- *************** -->
+    <!-- Head -->
+		<circle id="shiro-head" cx="0" cy="-260" r="60" fill="white" stroke="black" stroke-width="4" />
+		<circle id="shiro-head-top" cx="0" cy="0" r="60" fill="white" stroke="black" stroke-width="4" />
+
+    <!-- Ear -->
+		<ellipse id="shiro-ear-side" cx="-15" cy="-305" rx="15" ry="25" fill="black" />
+		<ellipse id="shiro-ear-front" cx="0" cy="-305" rx="20" ry="25" fill="black" />
+		<ellipse id="shiro-ear-top" cx="0" cy="-15" rx="20" ry="15" fill="black" />
+
+    <!-- Eyes -->
+		<ellipse id="shiro-eye-side" cx="30" cy="-280" rx="15" ry="22" fill="black" />
+		<ellipse id="shiro-eye-front" cx="0" cy="-280" rx="17" ry="22" fill="black" />
+		<ellipse id="shiro-eye-top" cx="0" cy="30" rx="17" ry="15" fill="black" />
+
+    <!-- Nose -->
+		<circle id="shiro-nose" cx="0" cy="-260" r="10" fill="black" />
+		<circle id="shiro-nose-top" cx="0" cy="60" r="10" fill="black" />
+
+    <!-- Stationary full head looking right -->
+		<g id="shiro-head-right-static">
+			<use xlink:href="#shiro-head" />
+			<use xlink:href="#shiro-ear-side" />
+			<use xlink:href="#shiro-eye-side" />
+			<use xlink:href="#shiro-nose" transform="translate(58,0)" />
+		</g>
+
+    <!-- Stationary full head facing front -->
+		<g id="shiro-head-front-static">
+			<use id="shiro-left-ear" xlink:href="#shiro-ear-front" x="-60" />
+			<use id="shiro-right-ear" xlink:href="#shiro-ear-front" x="60" />
+			<use xlink:href="#shiro-head" />
+			<use id="shiro-head-front-static-left-eye" xlink:href="#shiro-eye-front" x="-27" />
+			<use id="shiro-head-front-static-right-eye" xlink:href="#shiro-eye-front" x="27" />
+			<use id="shiro-head-front-static-front-nose" xlink:href="#shiro-nose" />
+		</g>
+
+    <!-- Stationary full head from the top -->
+		<g id="shiro-head-top-static">
+			<use xlink:href="#shiro-head-top" />
+			<use id="shiro-head-top-static-left-eye" xlink:href="#shiro-eye-top" x="-27" />
+			<use id="shiro-head-top-static-right-eye" xlink:href="#shiro-eye-top" x="27" />
+			<use id="shiro-head-top-static-front-nose" xlink:href="#shiro-nose-top" />
+			<use id="shiro-head-top-static-left-ear" xlink:href="#shiro-ear-top" x="-60" />
+			<use id="shiro-head-top-static-right-ear" xlink:href="#shiro-ear-top" x="60" />
+		</g>
+
+    <!-- Body -->
+		<circle id="shiro-body" cx="0" cy="-145" r="70" fill="white" stroke="black" stroke-width="5" />
+		<circle id="shiro-body-top" cx="0" cy="0" r="70" fill="white" stroke="black" stroke-width="5" />
+
+    <!-- Arm -->
+		<ellipse id="shiro-arm" cx="0" cy="-160" rx="25" ry="50" fill="black" />
+		<ellipse id="shiro-arm-front" cx="0" cy="-155" rx="20" ry="50" fill="black" />
+		<ellipse id="shiro-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
+
+    <!-- Leg -->
+		<ellipse id="shiro-leg" cx="0" cy="-50" rx="25" ry="50" fill="black" />
+
+    <!-- Torso -->
+		<clipPath id="shiro-body-clip">
+			<circle cx="0" cy="-145" r="72" />
+		</clipPath>
+		<clipPath id="shiro-body-top-clip">
+			<circle cx="0" cy="0" r="72" />
+		</clipPath>
+
+		<g id="shiro-torso-side" clip-path="url(#shiro-body-clip)">
+			<use xlink:href="#shiro-body" />
+			<ellipse id="shiro-birthmark-side" cx="60" cy="-140" rx="20" ry="40" fill="none" stroke="black" stroke-width="3" />
+		</g>
+
+		<g id="shiro-torso-front">
+			<use xlink:href="#shiro-body" />
+			<ellipse id="shiro-birthmark-front" cx="0" cy="-140" rx="35" ry="40" fill="none" stroke="black" stroke-width="3" />
+		</g>
+
+		<g id="shiro-torso-top" clip-path="url(#shiro-body-top-clip)">
+			<use xlink:href="#shiro-body-top" x="0" y="0" />
+			<ellipse id="shiro-birthmark-top" cx="0" cy="60" rx="35" ry="20" fill="none" stroke="black" stroke-width="3" />
+		</g>
+
+    <!-- Full body -->
+		<g id="shiro-right">
+			<use xlink:href="#shiro-leg" />
+			<use xlink:href="#shiro-torso-side" />
+			<use xlink:href="#shiro-arm" />
+			<use xlink:href="#shiro-head-right-static" />
+		</g>
+
+		<g id="shiro-right-walking">
+			<use xlink:href="#shiro-leg">
+				<animateTransform attributeName="transform" type="rotate" calcMode="spline"
+						values="-20 0 -145;20 0 -145;-20 0 -145" dur="1.7s"
+						keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+			</use>
+			<use xlink:href="#shiro-leg">
+				<animateTransform attributeName="transform" type="rotate" calcMode="spline"
+						values="-20 0 -145;20 0 -145;-20 0 -145" dur="1.7s"
+						keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+			</use>
+			<use xlink:href="#shiro-torso-side" />
+			<use xlink:href="#shiro-arm">
+				<animateTransform attributeName="transform" type="rotate" calcMode="spline"
+						values="-20 0 -225;20 0 -225;-20 0 -225" dur="1.7s"
+						keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+			</use>
+			<use xlink:href="#shiro-head-right-static" />
+			<animateTransform attributeName="transform" type="translate" calcMode="spline"
+					values="0 8.74;0 0;0 8.74" dur="0.85s"
+					keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+		</g>
+
+		<g id="shiro-front">
+			<use id="shiro-leg-left" xlink:href="#shiro-leg" x="-40" />
+			<use id="shiro-leg-right" xlink:href="#shiro-leg" x="40" />
+			<use xlink:href="#shiro-torso-front" />
+			<use id="shiro-arm-left" xlink:href="#shiro-arm-front" x="-70" transform="rotate(20 -70 -210) " />
+			<use id="shiro-arm-right" xlink:href="#shiro-arm-front" x="70" transform="rotate(-20 70 -210) " />
+			<use xlink:href="#shiro-head-front-static" />
+		</g>
+
+		<g id="shiro-top">
+			<use xlink:href="#shiro-torso-top" />
+			<use id="shiro-arm-top-left" xlink:href="#shiro-arm-top" x="-90" />
+			<use id="shiro-arm-top-right" xlink:href="#shiro-arm-top" x="90" />
+			<use xlink:href="#shiro-head-top-static">
+				<animateTransform attributeName="transform" type="rotate" calcMode="spline"
+						values="30;-30;30" dur="3s"
+						keyTimes="&CycleTimes;" keySplines="0 1 0 1;0 1 0 1" repeatCount="indefinite" />
+			</use>
+		</g>
+
+</svg>

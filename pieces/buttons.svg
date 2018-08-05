@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+
+<svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+
+<!-- *************** -->
+<!-- **  BUTTONS  ** -->
+<!-- *************** -->
+  <rect id="buttonbackground" height="100" width="100" fill="red" rx="10" ry="10" stroke="black" stroke-width="2pt" x="-50" y="-50" />
+  <g id="flowerbutton">
+    <text fill="black" font-family="Arial, Sans Serif" font-size="14pt" text-anchor="middle" x="0" y="-60">play</text>
+    <use xlink:href="#buttonbackground"/>
+    <use xlink:href="#bloom-front" />
+  </g>
+
+  <g id="creditlines">
+    <text fill="black" font-family="Arial, Sans Serif" font-size="14pt" text-anchor="middle" x="0" y="70">credits</text>
+    <line fill="none" stroke="black" stroke-width="2pt" x1="-25" x2="25" y1="-25" y2="-25"/>
+    <line fill="none" stroke="black" stroke-width="2pt" x1="-40" x2="40" y1="-15" y2="-15"/>
+    <line fill="none" stroke="black" stroke-width="2pt" x1="-25" x2="25" y1="15" y2="15"/>
+    <line fill="none" stroke="black" stroke-width="2pt" x1="-40" x2="40" y1="25" y2="25"/>
+  </g>
+  <g id="creditsbutton">
+    <use xlink:href="#buttonbackground"/>
+    <use xlink:href="#creditlines"/>
+  </g>
+  
+</svg>

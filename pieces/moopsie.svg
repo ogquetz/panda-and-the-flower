@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+
+<svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+<!-- *************** -->
+<!-- **  MOOPSIE  ** -->
+<!-- *************** -->
+  <!-- Head -->
+  <circle id="moopsie-head" cx="0" cy="-280" r="70" fill="white" stroke="black" stroke-width="4" />
+  <circle id="moopsie-head-top" cx="0" cy="0" r="70" fill="white" stroke="black" stroke-width="4" />
+
+  <!-- Ear -->
+  <ellipse id="moopsie-ear-side" cx="-15" cy="-300" rx="20" ry="30" fill="black" />
+  <ellipse id="moopsie-ear-front" cx="0" cy="-300" rx="20" ry="30" fill="black" />
+  <ellipse id="moopsie-ear-top" cx="0" cy="-15" rx="25" ry="20" fill="black" />
+
+  <!-- Eyes -->
+  <ellipse id="moopsie-eye-side" cx="35" cy="-300" rx="7" ry="20" fill="black" />
+  <ellipse id="moopsie-eye-front" cx="0" cy="-300" rx="12" ry="20" fill="black" />
+  <ellipse id="moopsie-eye-top" cx="0" cy="35" rx="12" ry="7" fill="black" />
+
+  <!-- Nose -->
+  <circle id="moopsie-nose" cx="70" cy="-270" r="10" fill="black" />
+  <circle id="moopsie-nose-top" cx="0" cy="70" r="10" fill="black" />
+
+  <!-- Stationary full head looking right -->
+  <g id="moopsie-head-right-static">
+    <use xlink:href="#moopsie-head" />
+    <use xlink:href="#moopsie-ear-side" />
+    <use xlink:href="#moopsie-eye-side" />
+    <use xlink:href="#moopsie-nose" />
+  </g>
+
+  <!-- Stationary full head facing front -->
+  <g id="moopsie-head-front-static">
+    <use id="moopsie-head-front-static-left-ear" xlink:href="#moopsie-ear-front" transform="translate(-85,0) rotate(40 0 -300) " />
+    <use id="moopsie-head-front-static-right-ear" xlink:href="#moopsie-ear-front" transform="translate(85,0) rotate(-40 0 -300) " />
+    <use xlink:href="#moopsie-head" />
+    <use id="moopsie-head-front-static-left-eye" xlink:href="#moopsie-eye-front" transform="translate(-30,0)" />
+    <use id="moopsie-head-front-static-right-eye" xlink:href="#moopsie-eye-front" transform="translate(30,0)" />
+    <use id="moopsie-head-front-static-nose" xlink:href="#moopsie-nose" transform="translate(-70,0)" />
+  </g>
+
+  <!-- Stationary full head from the top -->
+  <g id="moopsie-head-top-static">
+    <use xlink:href="#moopsie-head-top" />
+    <use id="moopsie-left-eye" xlink:href="#moopsie-eye-top" transform="translate(-20)" />
+    <use id="moopsie-right-eye" xlink:href="#moopsie-eye-top" transform="translate(20)" />
+    <use id="moopsie-front-nose" xlink:href="#moopsie-nose-top" />
+    <use id="moopsie-left-ear" xlink:href="#moopsie-ear-top" transform="translate(-85)" />
+    <use id="moopsie-right-ear" xlink:href="#moopsie-ear-top" transform="translate(85)" />
+  </g>
+
+  <!-- Body -->
+  <circle id="moopsie-body" cx="0" cy="-150" r="75" fill="white" stroke="black" stroke-width="5" />
+  <circle id="moopsie-body-top" cx="0" cy="0" r="75" fill="white" stroke="black" stroke-width="5" />
+
+  <!-- Arm -->
+  <ellipse id="moopsie-arm" cx="0" cy="-165" rx="25" ry="50" fill="black" />
+  <ellipse id="moopsie-arm-front" cx="0" cy="-165" rx="22" ry="50" fill="black" />
+  <ellipse id="moopsie-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
+
+  <!-- Leg -->
+  <ellipse id="moopsie-leg" cx="0" cy="-50" rx="25" ry="50" fill="black" />
+
+  <!-- Torso -->
+
+  <!-- Full Moopsie Body -->
+  <g id="moopsie-right">
+    <use xlink:href="#moopsie-leg" />
+    <use xlink:href="#moopsie-body" />
+    <use xlink:href="#moopsie-arm" />
+    <use xlink:href="#moopsie-head-right-static" />
+  </g>
+
+  <g id="moopsie-right-walking">
+    <use xlink:href="#moopsie-leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -150;20 0 -150;-20 0 -150" dur="1.76s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#moopsie-leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="20 0 -150;-20 0 -150;20 0 -150" dur="1.76s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#moopsie-body" />
+    <use xlink:href="#moopsie-arm">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -225;20 0 -225;-20 0 -225" dur="1.76s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#moopsie-head-right-static" />
+    <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        values="0 9;0 0;0 9" dur="0.88s"
+        keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+  </g>
+
+  <g id="moopsie-front">
+    <use xlink:href="#moopsie-leg" id="moopsie-leg-left" x="-30" />
+    <use xlink:href="#moopsie-leg" id="moopsie-leg-right" x="30" />
+    <use xlink:href="#moopsie-body" />
+    <use xlink:href="#moopsie-head-front-static" />
+    <use xlink:href="#moopsie-arm-front" id="moopsie-arm-left" x="-75" transform="rotate(15 -75 -225)" />
+    <use xlink:href="#moopsie-arm-front" id="moopsie-arm-right" x="75" transform="rotate(-15 75 -225) " />
+  </g>
+
+  <g id="moopsie-top">
+    <use xlink:href="#moopsie-body-top" />
+    <use id="moopsie-arm-top-right" xlink:href="#moopsie-arm-top" transform="translate(90)" />
+    <use id="moopsie-arm-top-left" xlink:href="#moopsie-arm-top" transform="translate(-90)" />
+    <use xlink:href="#moopsie-head-top-static">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20;40;-20" dur="1.5s"
+          keyTimes="&CycleTimes;" keySplines="0 1 0 1;0 1 0 1" repeatCount="indefinite" />
+    </use>
+  </g>
+
+</svg>

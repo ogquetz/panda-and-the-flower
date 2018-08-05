@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+
+<svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+<!-- *************** -->
+<!-- **   KURO    ** -->
+<!-- *************** -->
+  <!-- Head -->
+  <circle id="kuro-head" cx="0" cy="-260" r="60" fill="white" stroke="black" stroke-width="4" />
+  <circle id="kuro-head-top" cx="0" cy="0" r="60" fill="white" stroke="black" stroke-width="4" />
+
+  <!-- Ear -->
+  <ellipse id="kuro-ear-side" cx="-15" cy="-305" rx="15" ry="25" fill="black" />
+  <ellipse id="kuro-ear-front" cx="0" cy="-305" rx="20" ry="25" fill="black" />
+  <ellipse id="kuro-ear-top" cx="0" cy="-15" rx="20" ry="15" fill="black" />
+
+  <!-- Eyes -->
+  <ellipse id="kuro-eye-side" cx="30" cy="-280" rx="15" ry="22" fill="black" />
+  <ellipse id="kuro-eye-front" cx="0" cy="-280" rx="17" ry="22" fill="black" />
+  <ellipse id="kuro-eye-top" cx="0" cy="30" rx="17" ry="15" fill="black" />
+
+  <!-- Nose -->
+  <circle id="kuro-nose" cx="0" cy="-260" r="10" fill="black" />
+  <circle id="kuro-nose-top" cx="0" cy="60" r="10" fill="black" />
+
+  <!-- Stationary full head looking right -->
+  <g id="kuro-head-right-static">
+    <use xlink:href="#kuro-head" />
+    <use xlink:href="#kuro-ear-side" />
+    <use xlink:href="#kuro-eye-side" />
+    <use xlink:href="#kuro-nose" transform="translate(58,0)" />
+  </g>
+
+  <!-- Stationary full head facing front -->
+  <g id="kuro-head-front-static">
+    <use id="kuro-head-front-static-left-ear" xlink:href="#kuro-ear-front" x="-60" />
+    <use id="kuro-head-front-static-right-ear" xlink:href="#kuro-ear-front" x="60" />
+    <use xlink:href="#kuro-head" />
+    <use id="kuro-head-front-static-left-eye" xlink:href="#kuro-eye-front" x="-27" />
+    <use id="kuro-head-front-static-right-eye" xlink:href="#kuro-eye-front" x="27" />
+    <use id="kuro-head-front-static-front-nose" xlink:href="#kuro-nose" />
+  </g>
+
+  <!-- Stationary full head from the top -->
+  <g id="kuro-head-top-static">
+    <use xlink:href="#kuro-head-top" />
+    <use id="kuro-head-top-static-left-eye" xlink:href="#kuro-eye-top" x="-27" />
+    <use id="kuro-head-top-static-right-eye" xlink:href="#kuro-eye-top" x="27" />
+    <use id="kuro-head-top-static-front-nose" xlink:href="#kuro-nose-top" />
+    <use id="kuro-head-top-static-left-ear" xlink:href="#kuro-ear-top" x="-60" />
+    <use id="kuro-head-top-static-right-ear" xlink:href="#kuro-ear-top" x="60" />
+  </g>
+
+  <!-- Body -->
+  <circle id="kuro-body" cx="0" cy="-145" r="70" fill="white" stroke="black" stroke-width="5" />
+  <circle id="kuro-body-top" cx="0" cy="0" r="70" fill="white" stroke="black" stroke-width="5" />
+
+  <!-- Arm -->
+  <ellipse id="kuro-arm" cx="0" cy="-160" rx="25" ry="50" fill="black" />
+  <ellipse id="kuro-arm-front" cx="0" cy="-155" rx="20" ry="50" fill="black" />
+  <ellipse id="kuro-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
+
+  <!-- Leg -->
+  <ellipse id="kuro-leg" cx="0" cy="-50" rx="25" ry="50" fill="black" />
+
+  <!-- Torso -->
+  <clipPath id="kuro-body-clip">
+    <circle cx="0" cy="-145" r="72" />
+  </clipPath>
+  <clipPath id="kuro-body-top-clip">
+    <circle cx="0" cy="0" r="72" />
+  </clipPath>
+
+  <g id="kuro-torso-side" clip-path="url(#kuro-body-clip)">
+    <use xlink:href="#kuro-body" />
+    <ellipse id="kuro-birthmark-side" cx="60" cy="-140" rx="20" ry="40" fill="black" stroke="black" stroke-width="3" />
+  </g>
+
+  <g id="kuro-torso-front">
+    <use xlink:href="#kuro-body" />
+    <ellipse id="kuro-birthmark-front" cx="0" cy="-140" rx="35" ry="40" fill="black" stroke="black" stroke-width="3" />
+  </g>
+
+  <g id="kuro-torso-top" clip-path="url(#kuro-body-top-clip)">
+    <use xlink:href="#kuro-body-top" x="0" y="0" />
+    <ellipse id="kuro-birthmark-top" cx="0" cy="60" rx="35" ry="20" fill="black" stroke="black" stroke-width="3" />
+  </g>
+
+  <!-- Full body -->
+  <g id="kuro-right">
+    <use xlink:href="#kuro-leg" />
+    <use xlink:href="#kuro-torso-side" />
+    <use xlink:href="#kuro-arm" />
+    <use xlink:href="#kuro-head-right-static" />
+  </g>
+
+  <g id="kuro-right-walking">
+    <use xlink:href="#kuro-leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -145;20 0 -145;-20 0 -145" dur="1.7s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#kuro-leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="20 0 -145;-20 0 -145;20 0 -145" dur="1.7s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#kuro-torso-side" />
+    <use xlink:href="#kuro-arm">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -225;20 0 -225;-20 0 -225" dur="1.7s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#kuro-head-right-static" />
+    <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        values="0 8.74;0 0;0 8.74" dur="0.85s"
+        keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+  </g>
+
+  <g id="kuro-front">
+    <use id="kuro-leg-left" xlink:href="#kuro-leg" x="-40" />
+    <use id="kuro-leg-right" xlink:href="#kuro-leg" x="40" />
+    <use xlink:href="#kuro-torso-front" />
+    <use id="kuro-arm-left" xlink:href="#kuro-arm-front" x="-70" transform="rotate(20 -70 -210) " />
+    <use id="kuro-arm-right" xlink:href="#kuro-arm-front" x="70" transform="rotate(-20 70 -210) " />
+    <use xlink:href="#kuro-head-front-static" />
+  </g>
+
+  <g id="kuro-top">
+    <use xlink:href="#kuro-torso-top" />
+    <use id="kuro-arm-top-left" xlink:href="#kuro-arm-top" x="-90" />
+    <use id="kuro-arm-top-right" xlink:href="#kuro-arm-top" x="90" />
+    <use xlink:href="#kuro-head-top-static">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="30;-30;30" dur="2.3s"
+          keyTimes="&CycleTimes;" keySplines="0 1 0 1;0 1 0 1" repeatCount="indefinite" />
+    </use>
+  </g>
+
+</svg>

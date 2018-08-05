@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+
+<svg height="450" version="1.1" viewBox="0 0 800 450" width="800" x="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0">
+
+<!-- *************** -->
+<!-- ** FLAQUITA  ** -->
+<!-- *************** -->
+  <!-- Head -->
+  <circle id="flaquita-head" cx="0" cy="-330" r="60" fill="white" stroke="black" stroke-width="4" />
+  <circle id="flaquita-head-top" cx="0" cy="0" r="60" fill="white" stroke="black" stroke-width="4" />
+
+  <!-- Ear -->
+  <ellipse id="flaquita-ear-side" cx="-15" cy="-375" rx="15" ry="30" fill="black" />
+  <ellipse id="flaquita-ear-front" cx="0" cy="-375" rx="20" ry="30" fill="black" />
+  <ellipse id="flaquita-ear-top" cx="0" cy="-15" rx="20" ry="15" fill="black" />
+
+  <!-- Eyes -->
+  <ellipse id="flaquita-eye-side" cx="30" cy="-350" rx="8" ry="20" fill="black" />
+  <ellipse id="flaquita-eye-front" cx="0" cy="-350" rx="10" ry="20" fill="black" />
+  <ellipse id="flaquita-eye-top" cx="0" cy="30" rx="10" ry="8" fill="black" />
+
+  <!-- Nose -->
+  <circle id="flaquita-nose" cx="0" cy="-330" r="10" fill="black" />
+  <circle id="flaquita-nose-top" cx="0" cy="60" r="10" fill="black" />
+
+  <!-- Stationary full head looking right -->
+  <g id="flaquita-head-right-static">
+    <use xlink:href="#flaquita-head" />
+    <use xlink:href="#flaquita-ear-side" />
+    <use xlink:href="#flaquita-eye-side" />
+    <use xlink:href="#flaquita-nose" transform="translate(60,0)" />
+  </g>
+
+  <!-- Stationary full head facing front -->
+  <g id="flaquita-head-front-static">
+    <use id="flaquita-head-front-static-left-ear" xlink:href="#flaquita-ear-front" transform="translate(-60,0)" />
+    <use id="flaquita-head-front-static-right-ear" xlink:href="#flaquita-ear-front" transform="translate(60,0)" />
+    <use xlink:href="#flaquita-head" />
+    <use id="flaquita-head-front-static-left-eye" xlink:href="#flaquita-eye-front" transform="translate(-20,0)" />
+    <use id="flaquita-head-front-static-right-eye" xlink:href="#flaquita-eye-front" transform="translate(20,0)" />
+    <use id="flaquita-head-front-static-front-nose" xlink:href="#flaquita-nose" />
+  </g>
+
+  <!-- Stationary full head from the top -->
+  <g id="flaquita-head-top-static">
+    <use xlink:href="#flaquita-head-top" />
+    <use id="flaquita-left-eye" xlink:href="#flaquita-eye-top" transform="translate(-20)" />
+    <use id="flaquita-right-eye" xlink:href="#flaquita-eye-top" transform="translate(20)" />
+    <use id="flaquita-front-nose" xlink:href="#flaquita-nose-top" />
+    <use id="flaquita-left-ear" xlink:href="#flaquita-ear-top" transform="translate(-60)" />
+    <use id="flaquita-right-ear" xlink:href="#flaquita-ear-top" transform="translate(60)" />
+  </g>
+
+  <!-- Body -->
+  <ellipse id="flaquita-body" cx="0" cy="-200" rx="60" ry="90" fill="white" stroke="black" stroke-width="5" />
+  <ellipse id="flaquita-body-top" cx="0" cy="0" rx="60" ry="60" fill="white" stroke="black" stroke-width="5" />
+
+  <!-- Arm -->
+  <ellipse id="flaquita-arm" cx="0" cy="-210" rx="25" ry="65" fill="black" />
+  <ellipse id="flaquita-arm-front" cx="0" cy="-210" rx="20" ry="65" fill="black" />
+  <ellipse id="flaquita-arm-top" cx="0" cy="0" rx="25" ry="25" fill="black" />
+
+  <!-- Leg -->
+  <ellipse id="flaquita-leg" cx="0" cy="-70" rx="25" ry="70" fill="black" />
+
+  <!-- Torso -->
+
+  <!-- Full Flaquita Body -->
+  <g id="flaquita-right">
+    <use xlink:href="#flaquita-leg" />
+    <use xlink:href="#flaquita-body" />
+    <use xlink:href="#flaquita-arm" />
+    <use xlink:href="#flaquita-head-right-static" />
+  </g>
+
+  <g id="flaquita-right-walking">
+    <use xlink:href="#flaquita-leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -200;20 0 -200;-20 0 -200" dur="2.34s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#flaquita-leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="20 0 -200;-20 0 -200;20 0 -200" dur="2.34s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#flaquita-body" />
+    <use xlink:href="#flaquita-arm">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -285;20 0 -285;-20 0 -285" dur="2.34s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#flaquita-head-right-static" />
+    <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        values="0 12.06;0 0;0 12.06" dur="1.17s"
+        keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+  </g>
+
+  <g id="flaquita-front">
+    <use xlink:href="#flaquita-leg" id="flaquita-leg-left" x="-35" />
+    <use xlink:href="#flaquita-leg" id="flaquita-leg-right" x="35" />
+    <use xlink:href="#flaquita-body" />
+    <use xlink:href="#flaquita-head-front-static" />
+    <use xlink:href="#flaquita-arm-front" id="flaquita-arm-left" x="-75" transform="rotate(15 -75 -235) " />
+    <use xlink:href="#flaquita-arm-front" id="flaquita-arm-right" x="75" transform="rotate(-15 75 -235) " />
+  </g>
+
+  <g id="flaquita-top">
+    <use xlink:href="#flaquita-body-top" />
+    <use id="flaquita-arm-top-right" xlink:href="#flaquita-arm-top" transform="translate(-80)" />
+    <use id="flaquita-arm-top-left" xlink:href="#flaquita-arm-top" transform="translate(80)" />
+    <use xlink:href="#flaquita-head-top-static">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="10;-60;10" dur="3s"
+          keyTimes="&CycleTimes;" keySplines="0 1 0 1;0 1 0 1" repeatCount="indefinite" />
+    </use>
+  </g>
+
+</svg>

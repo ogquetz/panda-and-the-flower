@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[
+<!ENTITY EaseInOutTimes "0;1">
+<!ENTITY EaseInOutSplines ".5 0 .5 1">
+<!ENTITY CycleTimes "0;.5;1">
+<!ENTITY CycleSplines ".5 0 .5 1;.5 0 .5 1">
+<!ENTITY EaseInTimes "0;1">
+<!ENTITY EaseInSplines ".5 0 1 .5">
+<!ENTITY EaseOutTimes "0;1">
+<!ENTITY EaseOutSplines "0 .5 .5 1">
+<!ENTITY ldquo "&#8220;">
+<!ENTITY rdquo "&#8221;">
+
+]>
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+<!-- ** Author: Peter Garza                                                   ** -->
+<!-- ** Original version handcrafted lovingly in Notepad and Wordpad!         ** -->
+<!-- ** (becuase Notepad can only handle files up to 64k)                     ** -->
+<!-- *************************************************************************** -->
+<!-- ** Current version edited using jEdit (www.jedit.org)                    ** -->
+<!-- *************************************************************************** -->
+<!-- *************************************************************************** -->
+
+<!-- *************** -->
+<!-- **   PANDA   ** -->
+<!-- *************** -->
+  <!-- Head -->
+  <circle id="head" cx="0" cy="-310" r="75" fill="white" stroke="black" stroke-width="4" />
+  <circle id="head-top" cx="0" cy="0" r="75" fill="white" stroke="black" stroke-width="4" />
+
+  <!-- Ear -->
+  <ellipse id="ear-side" cx="-15" cy="-370" rx="20" ry="30" fill="black" />
+  <ellipse id="ear-front" cx="0" cy="-370" rx="30" ry="30" fill="black" />
+  <ellipse id="ear-top" cx="0" cy="-15" rx="30" ry="20" fill="black" />
+
+  <!-- Eyes -->
+  <ellipse id="eye-side" cx="35" cy="-335" rx="10" ry="25" fill="black" />
+  <ellipse id="eye-front" cx="0" cy="-335" rx="15" ry="25" fill="black" />
+  <ellipse id="eye-top" cx="0" cy="35" rx="15" ry="10" fill="black" />
+
+  <!-- Nose -->
+  <circle id="nose" cx="75" cy="-310" r="10" fill="black" />
+  <circle id="nose-top" cx="0" cy="75" r="10" fill="black" />
+
+  <!-- Stationary full head looking right -->
+  <g id="head-right-static">
+    <use xlink:href="#head" />
+    <use xlink:href="#ear-side" />
+    <use xlink:href="#eye-side" />
+    <use xlink:href="#nose" />
+  </g>
+
+  <!-- Stationary full head facing front -->
+  <g id="head-front-static">
+    <use id="head-front-static-left-ear" xlink:href="#ear-front" transform="translate(-60,0)" />
+    <use id="head-front-static-right-ear" xlink:href="#ear-front" transform="translate(60,0)" />
+    <use xlink:href="#head" />
+    <use id="left-eye" xlink:href="#eye-front" transform="translate(-30,0)" />
+    <use id="right-eye" xlink:href="#eye-front" transform="translate(30,0)" />
+    <use id="front-nose" xlink:href="#nose" transform="translate(-75,0)" />
+  </g>
+
+  <!-- Stationary full head facing back -->
+  <g id="head-rear-static">
+    <use id="head-rear-static-left-ear" xlink:href="#ear-front" transform="translate(-60,0)" />
+    <use id="head-rear-static-right-ear" xlink:href="#ear-front" transform="translate(60,0)" />
+    <use xlink:href="#head" />
+  </g>
+
+  <!-- Stationary full head from the top -->
+  <g id="head-top-static">
+    <use xlink:href="#head-top" />
+    <use id="head-top-static-left-eye" xlink:href="#eye-top" transform="translate(-30,0)" />
+    <use id="head-top-static-right-eye" xlink:href="#eye-top" transform="translate(30,0)" />
+    <use id="head-top-static-left-ear" xlink:href="#ear-top" transform="translate(-60,0)" />
+    <use id="head-top-static-right-ear" xlink:href="#ear-top" transform="translate(60,0)" />
+    <use xlink:href="#nose-top" />
+  </g>
+
+  <!-- Body -->
+  <circle id="body" cx="0" cy="-170" r="85"
+      fill="white" stroke="black" stroke-width="5" />
+  <circle id="body-top" cx="0" cy="0" r="85"
+      fill="white" stroke="black" stroke-width="5" />
+
+  <!-- Arm -->
+  <ellipse id="arm" cx="0" cy="-175" rx="30" ry="60" fill="black" />
+  <ellipse id="arm-front" cx="0" cy="-175" rx="25" ry="60" fill="black" />
+  <ellipse id="arm-top" cx="0" cy="0" rx="35" ry="30" fill="black" />
+
+  <!-- Leg -->
+  <ellipse id="leg" cx="0" cy="-60" rx="30" ry="60" fill="black" />
+
+  <!-- Torso -->
+  <g id="torso-front">
+    <use xlink:href="#body" />
+  </g>
+  <g id="torso-rear">
+    <use xlink:href="#body" />
+  </g>
+
+  <!-- Full Panda Body -->
+  <g id="panda-right">
+    <use xlink:href="#leg" />
+    <g id="torso-side">
+      <use xlink:href="#body" />
+      <use xlink:href="#arm" />
+    </g>
+    <use xlink:href="#head-right-static" />
+  </g>
+
+  <g id="panda-right-walking">
+    <use xlink:href="#leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="-20 0 -170;20 0 -170;-20 0 -170" dur="2s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <use xlink:href="#leg">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="20 0 -170;-20 0 -170;20 0 -170" dur="2s"
+          keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+    </use>
+    <g id="panda-right-walking-torso-side">
+      <use xlink:href="#body" />
+      <use xlink:href="#arm">
+        <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+            values="20 0 -245;-20 0 -245;20 0 -245" dur="2s"
+            keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+      </use>
+    </g>
+    <use xlink:href="#head-right-static" />
+    <animateTransform attributeName="transform" type="translate" calcMode="spline"
+        values="0 10.25;0 0;0 10.25" dur="1s"
+        keyTimes="&CycleTimes;" keySplines="&CycleSplines;" repeatCount="indefinite" />
+  </g>
+
+  <g id="panda-front">
+    <use xlink:href="#leg" x="-40" />
+    <use xlink:href="#leg" x="40" />
+    <use xlink:href="#body" />
+    <use xlink:href="#head-front-static" />
+    <use xlink:href="#arm-front" id="panda-front-arm-left" x="-90" transform="rotate(15 -90 -245)" />
+    <use xlink:href="#arm-front" id="panda-front-arm-right" x="90" transform="rotate(-15 90 -245) " />
+  </g>
+
+  <g id="panda-rear">
+    <use xlink:href="#leg" x="-40" />
+    <use xlink:href="#leg" x="40" />
+    <use xlink:href="#torso-rear" />
+    <use xlink:href="#head-rear-static" />
+    <use xlink:href="#arm-front" id="panda-rear-arm-left" x="-90" transform="rotate(15 -90 -245)" />
+    <use xlink:href="#arm-front" id="panda-rear-arm-right" x="90" transform="rotate(-15 90 -245) " />
+  </g>
+
+  <g id="panda-top">
+    <use xlink:href="#body-top" />
+    <use id="arm-top-right" xlink:href="#arm-top" x="110" />
+    <use id="arm-top-left" xlink:href="#arm-top" x="-110" />
+    <use xlink:href="#head-top-static">
+      <animateTransform attributeName="transform" type="rotate" calcMode="spline"
+          values="30;-30;30" dur="2s"
+          keyTimes="&CycleTimes;" keySplines="0 1 0 1;0 1 0 1" repeatCount="indefinite" />
+    </use>
+  </g>
+
+</svg>
