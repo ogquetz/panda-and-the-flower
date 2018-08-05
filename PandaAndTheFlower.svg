@@ -1259,7 +1259,7 @@
 <!-- ============= -->
 <!-- == DISPLAY == -->
 <!-- ============= -->
-
+  <rect id="background" x="0" y="0" width="100%" height="100%" fill="white"/>
 	<g id="title" display="none">
 		<set id="titleDisplay" attributeName="display" to="inline" begin="0s; menuflowerbutton.click+3s" dur="6s" fill="remove"/>
 		<animate attributeName="opacity" from="1" to="0" dur="1s" begin="titleDisplay.begin+4s" fill="freeze" id="titleNameFade"/>
